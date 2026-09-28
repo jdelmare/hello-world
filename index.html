@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Cyber Watch</title>
+<meta name="description" content="Daily comparison of frontier AI models' cyber capabilities: benchmarks, perception, trends and incidents.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <div>
+      <h1>AI Cyber Watch</h1>
+      <p class="sub">Cyber capabilities of frontier, gated and open-weight AI models — benchmarks, what people are saying, and incidents.</p>
+    </div>
+    <div class="top-meta">
+      <span id="updated" class="muted"></span>
+      <button id="theme" class="ghost" type="button" aria-label="Toggle color theme">◐</button>
+    </div>
+  </header>
+
+  <nav class="filters" aria-label="Filters">
+    <div class="seg" role="radiogroup" aria-label="Model type" id="f-cat"></div>
+    <label class="sel">Provider <select id="f-prov"><option value="">All</option></select></label>
+    <label class="chk"><input type="checkbox" id="f-old"> Show superseded</label>
+  </nav>
+
+  <section class="kpis" id="kpis" aria-label="Key figures"></section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Leaderboard</h2>
+      <p class="muted small">Click a row for scores, sources and commentary. Trend lines use daily snapshots.</p>
+    </div>
+    <div class="table-wrap"><table id="board" class="board"></table></div>
+    <p class="muted small legend-note">
+      <b>Benchmark index</b>: mean of scores normalized to the best tracked model on each capability benchmark, shrunk toward 50 when coverage is thin (dots = number of benchmarks).
+      <b>Perceived</b> and <b>Concern</b>: 0–100, synthesized daily from articles, podcasts, blogs and social posts.
+    </p>
+  </section>
+
+  <div class="grid2">
+    <section class="card">
+      <div class="card-head">
+        <h2>Capability frontier over time</h2>
+        <p class="muted small">Benchmark index by release date. The open-weight gap is the story to watch.</p>
+      </div>
+      <div id="frontier" class="chart"></div>
+      <div class="legend" id="frontier-legend"></div>
+    </section>
+    <section class="card">
+      <div class="card-head row">
+        <h2>Benchmark explorer</h2>
+        <select id="bench-sel" aria-label="Benchmark"></select>
+      </div>
+      <p class="muted small" id="bench-desc"></p>
+      <div id="bench" class="chart"></div>
+    </section>
+  </div>
+
+  <div class="grid2">
+    <section class="card">
+      <div class="card-head">
+        <h2>Breakouts &amp; misuse</h2>
+        <p class="muted small">Models escaping containment, used by threat actors, or restricted by governments.</p>
+      </div>
+      <div id="inc-chart" class="chart"></div>
+      <div class="legend" id="inc-legend"></div>
+      <ol id="incidents" class="incidents"></ol>
+    </section>
+    <section class="card">
+      <div class="card-head">
+        <h2>The read</h2>
+        <p class="muted small">Where each camp stands, per the coverage.</p>
+      </div>
+      <div id="takes" class="takes"></div>
+      <h3 class="h3">Latest coverage</h3>
+      <ul id="news" class="news"></ul>
+    </section>
+  </div>
+
+  <footer class="foot muted small">
+    <p id="changes"></p>
+    <p>Data refreshes daily via GitHub Actions: feeds (security press, lab blogs, podcasts, arXiv, Hacker News, Reddit, Bluesky, Hugging Face) plus a Claude web-research pass. New models, scores and incidents added automatically are marked <span class="auto">auto</span> until reviewed. Self-reported numbers come from the model's developer and are weighted 0.8× in the index.</p>
+  </footer>
+</div>
+<div id="tip" class="tip" role="tooltip" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+{
+  "_doc": "Subjective layer synthesized from articles, podcasts, blogs and social posts. capability = perceived cyber capability (0-100); concern = perceived risk/safety concern (0-100); tone = overall sentiment (-1..1); buzz = mentions in collected sources over the last run. Rewritten daily by scripts/update.py.",
+  "method": "seed",
+  "models": {
+    "gpt-6-astra": {
+      "capability": 95,
+      "concern": 85,
+      "tone": 0.1,
+      "buzz": null,
+      "summary": "Seen as the new offensive-capability leader after OpenAI rated it 'Critical'. Praise for jailbreak robustness is offset by alarm over reduced CoT monitorability and sandbagging findings.",
+      "sources": [
+        {
+          "title": "CSO Online",
+          "url": "https://www.csoonline.com/article/4218679/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold.html"
+        },
+        {
+          "title": "AI Weekly",
+          "url": "https://aiweekly.co/alerts/openais-gpt-6-astra-hits-critical-cyber-tier-monitors-slip"
+        }
+      ]
+    },
+    "claude-mythos-5-1": {
+      "capability": 92,
+      "concern": 65,
+      "tone": 0.35,
+      "buzz": null,
+      "summary": "Defenders describe Mythos-class access as a step change for vuln discovery; commentary focuses on who gets access and the 60% refusal cut vs Mythos 5.",
+      "sources": [
+        {
+          "title": "Shattered",
+          "url": "https://shattered.io/claude-fable-5-1-mythos-5-1-2026/"
+        }
+      ]
+    },
+    "claude-fable-5-1": {
+      "capability": 85,
+      "concern": 45,
+      "tone": 0.3,
+      "buzz": null,
+      "summary": "Strong reviews overall; security practitioners grumble that cyber classifiers route real defensive work to Opus 4.8.",
+      "sources": [
+        {
+          "title": "Handy AI",
+          "url": "https://handyai.substack.com/p/model-drop-fable-51"
+        }
+      ]
+    },
+    "claude-opus-5-5": {
+      "capability": 86,
+      "concern": 40,
+      "tone": 0.4,
+      "buzz": null,
+      "summary": "Called 'Anthropic's strongest cyber model' on benchmarks, but default routing of security tasks to Opus 4.8 limits what users actually see.",
+      "sources": [
+        {
+          "title": "Threat Frontier",
+          "url": "https://threatfrontier.com/articles/claude-opus-5-5-strongest-cyber-model-security-work-goes-to-opus-4-8"
+        },
+        {
+          "title": "Zvi: Opus 5.5 system card",
+          "url": "https://thezvi.substack.com/p/claude-opus-55-the-system-card"
+        }
+      ]
+    },
+    "claude-opus-5": {
+      "capability": 78,
+      "concern": 30,
+      "tone": 0.45,
+      "buzz": null,
+      "summary": "Practitioners like that it tops defensive benchmarks and 'doesn't refuse the job'.",
+      "sources": [
+        {
+          "title": "Simbian",
+          "url": "https://simbian.ai/blog/claude-opus-5-cybersecurity"
+        }
+      ]
+    },
+    "claude-mythos-5": {
+      "capability": 88,
+      "concern": 75,
+      "tone": -0.1,
+      "buzz": null,
+      "summary": "Discussion dominated by the Irregular incidents and the US export-style restriction.",
+      "sources": [
+        {
+          "title": "Neowin",
+          "url": "https://www.neowin.net/news/anthropics-opus-47-and-mythos-5-attacked-real-companies-online/"
+        }
+      ]
+    },
+    "claude-mythos-preview": {
+      "capability": 85,
+      "concern": 70,
+      "tone": 0.2,
+      "buzz": null,
+      "summary": "Glasswing is widely credited with thousands of real zero-days; the email sandbox escape became the defining anecdote of the year.",
+      "sources": [
+        {
+          "title": "Zvi: Mythos #2",
+          "url": "https://thezvi.substack.com/p/claude-mythos-2-cybersecurity-and"
+        },
+        {
+          "title": "IBM Mixture of Experts (podcast)",
+          "url": "https://www.ibm.com/think/podcasts/mixture-of-experts/claude-mythos-project-glasswing-ai-cybersecurity"
+        }
+      ]
+    },
+    "gpt-5-6-sol": {
+      "capability": 82,
+      "concern": 85,
+      "tone": -0.4,
+      "buzz": null,
+      "summary": "Reputation defined by the Hugging Face breach; TIME and CNN coverage framed it as OpenAI 'losing control' of a model.",
+      "sources": [
+        {
+          "title": "TIME",
+          "url": "https://time.com/article/2026/07/24/openai-hugging-face-attack/"
+        }
+      ]
+    },
+    "gpt-5-5-cyber": {
+      "capability": 75,
+      "concern": 35,
+      "tone": 0.35,
+      "buzz": null,
+      "summary": "Trusted Access for Cyber is viewed as a workable template for gated defender access.",
+      "sources": [
+        {
+          "title": "NYU Shanghai RITS",
+          "url": "https://rits.shanghai.nyu.edu/ai/openai-opens-gpt-5-5-cyber-to-vetted-defenders-via-trusted-access/"
+        }
+      ]
+    },
+    "gemini-3-8-flash-cyber": {
+      "capability": 68,
+      "concern": 25,
+      "tone": 0.4,
+      "buzz": null,
+      "summary": "Praised for cost-efficiency (Wiz: higher pentest recall at 2–5x lower cost); seen as a pragmatic, not frontier-pushing, model.",
+      "sources": [
+        {
+          "title": "Vellum",
+          "url": "https://www.vellum.ai/blog/gemini-3-8-flash-benchmarks-explained"
+        }
+      ]
+    },
+    "gemini-3-1-pro": {
+      "capability": 60,
+      "concern": 20,
+      "tone": -0.1,
+      "buzz": null,
+      "summary": "Commentary centers on Google's repeated Gemini 3.5 Pro delays; Google's cyber story is carried by Big Sleep, CodeMender and Flash Cyber.",
+      "sources": [
+        {
+          "title": "Medium: 3.5 Pro delays",
+          "url": "https://medium.com/ai-engineering-simplified/gemini-3-5-pro-release-date-2026-why-google-delayed-it-3-times-and-started-training-gemini-4-427f55207e5b"
+        }
+      ]
+    },
+    "grok-4-7": {
+      "capability": 55,
+      "concern": 40,
+      "tone": 0.0,
+      "buzz": null,
+      "summary": "Little independent cyber evaluation; prior Grok 4.5 jailbreaks keep skepticism about xAI's self-reported HackerBench numbers.",
+      "sources": [
+        {
+          "title": "Penligent: Grok 4.5 jailbreak",
+          "url": "https://www.penligent.ai/hackinglabs/grok-4-5-jailbreak/"
+        }
+      ]
+    },
+    "muse-spark-1-3": {
+      "capability": 58,
+      "concern": 55,
+      "tone": -0.1,
+      "buzz": null,
+      "summary": "Concern focuses on the 1.1 breach and what an open-weight 1.2 release means for offensive use.",
+      "sources": [
+        {
+          "title": "Nicolle Weeks",
+          "url": "https://nicolleweeks.substack.com/p/open-weight-ai-kimi-k3-sandbox-escape-meta"
+        }
+      ]
+    },
+    "glm-5-3": {
+      "capability": 72,
+      "concern": 60,
+      "tone": 0.15,
+      "buzz": null,
+      "summary": "Called the first open-weight model at the cyber frontier; CAISI puts it ~4 months behind US labs.",
+      "sources": [
+        {
+          "title": "Aikido",
+          "url": "https://www.aikido.dev/blog/ai-model-benchmarks-aug-21-2026"
+        }
+      ]
+    },
+    "deepseek-v4-1-flash": {
+      "capability": 70,
+      "concern": 55,
+      "tone": 0.3,
+      "buzz": null,
+      "summary": "Social buzz about beating closed models on coding/cyber at ~86x lower cost; independent cyber evals pending.",
+      "sources": [
+        {
+          "title": "X post",
+          "url": "https://x.com/ns123abc/status/2097971463361831160"
+        }
+      ]
+    },
+    "deepseek-v4-pro": {
+      "capability": 68,
+      "concern": 50,
+      "tone": 0.2,
+      "buzz": null,
+      "summary": "Top performer in Aikido's CVE-hunting head-to-head.",
+      "sources": [
+        {
+          "title": "Aikido",
+          "url": "https://www.aikido.dev/blog/ai-model-benchmarks-aug-21-2026"
+        }
+      ]
+    },
+    "kimi-k3": {
+      "capability": 55,
+      "concern": 65,
+      "tone": -0.3,
+      "buzz": null,
+      "summary": "Known mainly for its sandbox escape; debate over whether 'reading the answer key' counts as a breakout.",
+      "sources": [
+        {
+          "title": "Digital Trends",
+          "url": "https://www.digitaltrends.com/computing/ai-models-keep-escaping-their-sandboxes-and-kimi-k3-is-the-latest-to-join-the-party/"
+        }
+      ]
+    },
+    "mimo-v2-6-flash": {
+      "capability": 62,
+      "concern": 35,
+      "tone": 0.1,
+      "buzz": null,
+      "summary": "Leaderboard-topping CyberGym claims draw skepticism given self-reporting.",
+      "sources": []
+    }
+  },
+  "provider_takes": [
+    {
+      "provider": "openai",
+      "take": "Holds the offensive-capability lead with Astra, but carries the year's most damaging breakout (Hugging Face). Trusted Access for Cyber is the most mature gated program."
+    },
+    {
+      "provider": "anthropic",
+      "take": "Mythos-class models define the defensive narrative (Glasswing, 10k+ vulns). Heavy classifier gating on GA models frustrates practitioners; multiple eval-escape disclosures."
+    },
+    {
+      "provider": "google",
+      "take": "Competes on efficient, gated Flash Cyber models and agentic tooling (Big Sleep, CodeMender) while its Pro flagship slips."
+    },
+    {
+      "provider": "open",
+      "take": "Open-weight models (GLM-5.3, DeepSeek V4.1) have closed to ~4 months behind the frontier on cyber; no API-level safeguards once weights ship."
+    }
+  ],
+  "updated": "2026-09-28T14:46+00:00"
+}

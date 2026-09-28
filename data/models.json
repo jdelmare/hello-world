@@ -1,0 +1,569 @@
+{
+  "_doc": "Model registry. category: ga = generally available, gated = trusted-access / cyber-specific, open = open-weight. status: active | superseded | announced | withdrawn. auto_added=true means the daily pipeline added it and it awaits human review.",
+  "providers": {
+    "anthropic": {
+      "name": "Anthropic"
+    },
+    "openai": {
+      "name": "OpenAI"
+    },
+    "google": {
+      "name": "Google DeepMind"
+    },
+    "xai": {
+      "name": "xAI"
+    },
+    "meta": {
+      "name": "Meta"
+    },
+    "zai": {
+      "name": "Z.ai"
+    },
+    "deepseek": {
+      "name": "DeepSeek"
+    },
+    "moonshot": {
+      "name": "Moonshot AI"
+    },
+    "alibaba": {
+      "name": "Alibaba (Qwen)"
+    },
+    "xiaomi": {
+      "name": "Xiaomi"
+    }
+  },
+  "models": [
+    {
+      "id": "claude-mythos-5-1",
+      "name": "Claude Mythos 5.1",
+      "provider": "anthropic",
+      "category": "gated",
+      "status": "active",
+      "released": "2026-09-01",
+      "access": "Cyber Verification Program / Project Glasswing (vetted defenders)",
+      "aliases": [
+        "Mythos 5.1"
+      ],
+      "notes": "Same weights as Fable 5.1 with cyber safeguards loosened for vetted defenders.",
+      "sources": [
+        {
+          "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+        }
+      ],
+      "index": {
+        "index": 64.4,
+        "n": 1
+      }
+    },
+    {
+      "id": "claude-fable-5-1",
+      "name": "Claude Fable 5.1",
+      "provider": "anthropic",
+      "category": "ga",
+      "status": "active",
+      "released": "2026-09-01",
+      "access": "Claude API, AWS, Google Cloud, Azure — cyber requests classifier-routed to Opus 4.8",
+      "aliases": [
+        "Fable 5.1"
+      ],
+      "notes": "Anthropic says Fable/Mythos 5.1 have the strongest overall cyber capabilities it has released.",
+      "sources": [
+        {
+          "title": "Fable 5.1 & Mythos 5.1 System Card",
+          "url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf"
+        }
+      ],
+      "index": null
+    },
+    {
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "provider": "anthropic",
+      "category": "ga",
+      "status": "active",
+      "released": "2026-09-22",
+      "access": "GA; most cyber tasks routed to Opus 4.8 by default, full access via Cyber Verification Program",
+      "aliases": [
+        "Opus 5.5"
+      ],
+      "notes": "Strongest Claude cyber benchmark results to date, yet still in Anthropic's lower cyber risk tier.",
+      "sources": [
+        {
+          "title": "Claude Opus 5.5 System Card",
+          "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf"
+        }
+      ],
+      "index": {
+        "index": 71.5,
+        "n": 3
+      }
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "provider": "anthropic",
+      "category": "ga",
+      "status": "superseded",
+      "released": "2026-07-24",
+      "access": "GA",
+      "aliases": [
+        "Opus 5"
+      ],
+      "notes": "",
+      "sources": [
+        {
+          "title": "Claude Opus 5 System Card",
+          "url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf"
+        }
+      ],
+      "index": {
+        "index": 58.0,
+        "n": 1
+      }
+    },
+    {
+      "id": "claude-mythos-5",
+      "name": "Claude Mythos 5",
+      "provider": "anthropic",
+      "category": "gated",
+      "status": "superseded",
+      "released": "2026-06-09",
+      "access": "Trusted access; briefly revoked June 12 after US government restriction on non-US access",
+      "aliases": [
+        "Mythos 5"
+      ],
+      "notes": "One of three Claude models that reached real external systems during Irregular-run evals.",
+      "sources": [
+        {
+          "title": "Claude Mythos (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Claude_Mythos"
+        }
+      ],
+      "index": null
+    },
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "provider": "anthropic",
+      "category": "ga",
+      "status": "superseded",
+      "released": "2026-06-09",
+      "access": "GA; pulled June 12, redeployed July 1 with new cyber safeguards",
+      "aliases": [
+        "Fable 5"
+      ],
+      "notes": "First generally available Mythos-class model.",
+      "sources": [
+        {
+          "title": "Redeploying Claude Fable 5",
+          "url": "https://www.anthropic.com/news/redeploying-fable-5"
+        }
+      ],
+      "index": null
+    },
+    {
+      "id": "claude-mythos-preview",
+      "name": "Claude Mythos Preview",
+      "provider": "anthropic",
+      "category": "gated",
+      "status": "superseded",
+      "released": "2026-04-07",
+      "access": "Project Glasswing partners only (~50 orgs)",
+      "aliases": [
+        "Mythos Preview",
+        "Claude Mythos"
+      ],
+      "notes": "Glasswing partners report 10,000+ high/critical vulnerabilities found. First model to complete both UK AISI cyber ranges.",
+      "sources": [
+        {
+          "title": "Project Glasswing",
+          "url": "https://www.anthropic.com/glasswing"
+        },
+        {
+          "title": "Glasswing: an initial update",
+          "url": "https://www.anthropic.com/research/glasswing-initial-update"
+        }
+      ],
+      "index": {
+        "index": 60.7,
+        "n": 2
+      }
+    },
+    {
+      "id": "claude-opus-4-7",
+      "name": "Claude Opus 4.7",
+      "provider": "anthropic",
+      "category": "ga",
+      "status": "superseded",
+      "released": null,
+      "access": "GA",
+      "aliases": [
+        "Opus 4.7"
+      ],
+      "notes": "Tracked for incident history.",
+      "sources": [],
+      "index": null
+    },
+    {
+      "id": "gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "provider": "openai",
+      "category": "ga",
+      "status": "active",
+      "released": "2026-09-03",
+      "access": "GA (ChatGPT, API); first model rated 'Critical' cyber under OpenAI Preparedness Framework",
+      "aliases": [
+        "Astra",
+        "GPT-6"
+      ],
+      "notes": "Refuses 91.5% of cyber jailbreak evals vs 59% for GPT-5.6 Sol, but system card reports reduced chain-of-thought monitorability.",
+      "sources": [
+        {
+          "title": "GPT-6 Astra System Card",
+          "url": "https://deploymentsafety.openai.com/gpt-6-astra"
+        },
+        {
+          "title": "Path to Astra",
+          "url": "https://openai.com/index/path-to-astra/"
+        }
+      ],
+      "index": {
+        "index": 75.8,
+        "n": 2
+      }
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol",
+      "provider": "openai",
+      "category": "ga",
+      "status": "superseded",
+      "released": "2026-07-09",
+      "access": "GA (limited partner preview from June 26)",
+      "aliases": [
+        "GPT-5.6 Sol",
+        "GPT-5.6"
+      ],
+      "notes": "Escaped an ExploitGym eval sandbox and compromised Hugging Face infrastructure (disclosed July 21).",
+      "sources": [
+        {
+          "title": "GPT-5.6",
+          "url": "https://openai.com/index/gpt-5-6/"
+        }
+      ],
+      "index": {
+        "index": 62.9,
+        "n": 2
+      }
+    },
+    {
+      "id": "gpt-5-5-cyber",
+      "name": "GPT-5.5-Cyber",
+      "provider": "openai",
+      "category": "gated",
+      "status": "active",
+      "released": "2026-05-07",
+      "access": "Trusted Access for Cyber (vetted defenders; phishing-resistant auth required)",
+      "aliases": [
+        "GPT-5.5-Cyber",
+        "GPT 5.5 Cyber"
+      ],
+      "notes": "Relaxed-guardrail variant for vetted defenders.",
+      "sources": [
+        {
+          "title": "Scaling Trusted Access for Cyber with GPT-5.5",
+          "url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+        }
+      ],
+      "index": null
+    },
+    {
+      "id": "gpt-5-5",
+      "name": "GPT-5.5",
+      "provider": "openai",
+      "category": "ga",
+      "status": "superseded",
+      "released": null,
+      "access": "GA",
+      "aliases": [
+        "GPT-5.5"
+      ],
+      "notes": "Along with Mythos Preview, broke above UK AISI's cyber time-horizon trend line.",
+      "sources": [
+        {
+          "title": "GPT-5.5 (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/GPT-5.5"
+        }
+      ],
+      "index": {
+        "index": 56.5,
+        "n": 2
+      }
+    },
+    {
+      "id": "gemini-3-8-flash-cyber",
+      "name": "Gemini 3.8 Flash Cyber",
+      "provider": "google",
+      "category": "gated",
+      "status": "active",
+      "released": "2026-09-02",
+      "access": "Fairwind Program (trusted defenders)",
+      "aliases": [
+        "3.8 Flash Cyber",
+        "Flash Cyber"
+      ],
+      "notes": "Google claims it beats 'significantly larger frontier models' on CyberGym.",
+      "sources": [
+        {
+          "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+        }
+      ],
+      "index": {
+        "index": 67.4,
+        "n": 1
+      }
+    },
+    {
+      "id": "gemini-3-8-flash",
+      "name": "Gemini 3.8 Flash",
+      "provider": "google",
+      "category": "ga",
+      "status": "active",
+      "released": "2026-09-02",
+      "access": "GA",
+      "aliases": [
+        "Gemini 3.8 Flash"
+      ],
+      "notes": "",
+      "sources": [
+        {
+          "title": "Gemini 3.8 Flash rolling out",
+          "url": "https://9to5google.com/2026/09/02/gemini-3-8-flash-launch/"
+        }
+      ],
+      "index": null
+    },
+    {
+      "id": "gemini-3-5-flash-cyber",
+      "name": "Gemini 3.5 Flash Cyber",
+      "provider": "google",
+      "category": "gated",
+      "status": "superseded",
+      "released": "2026-07-21",
+      "access": "Limited pilot via CodeMender (governments, trusted partners)",
+      "aliases": [
+        "3.5 Flash Cyber"
+      ],
+      "notes": "Found 10 vulnerabilities that neither Gemini 3.5 Flash nor Claude Opus 4.6 found (Google).",
+      "sources": [
+        {
+          "title": "Help Net Security",
+          "url": "https://www.helpnetsecurity.com/2026/07/22/google-gemini-3-5-flash-cyber-model/"
+        }
+      ],
+      "index": null
+    },
+    {
+      "id": "gemini-3-1-pro",
+      "name": "Gemini 3.1 Pro",
+      "provider": "google",
+      "category": "ga",
+      "status": "active",
+      "released": null,
+      "access": "GA",
+      "aliases": [
+        "Gemini 3.1 Pro"
+      ],
+      "notes": "Current Pro model; Gemini 3.5 Pro announced at I/O (May 19) but still unreleased.",
+      "sources": [
+        {
+          "title": "Gemini 3.1 Pro model card",
+          "url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/"
+        }
+      ],
+      "index": null
+    },
+    {
+      "id": "grok-4-7",
+      "name": "Grok 4.7",
+      "provider": "xai",
+      "category": "ga",
+      "status": "active",
+      "released": null,
+      "access": "GA",
+      "aliases": [
+        "Grok 4.7"
+      ],
+      "notes": "xAI reports only 3.3% of risky dual-use prompts pass on its HackerBench v0.3. Grok 5 still in training.",
+      "sources": [
+        {
+          "title": "xAI release notes",
+          "url": "https://releasebot.io/updates/xai"
+        }
+      ],
+      "index": null
+    },
+    {
+      "id": "muse-spark-1-3",
+      "name": "Muse Spark 1.3",
+      "provider": "meta",
+      "category": "ga",
+      "status": "active",
+      "released": null,
+      "access": "Meta API / Muse Code CLI; open weights for 1.2 promised",
+      "aliases": [
+        "Muse Spark"
+      ],
+      "notes": "Predecessor Muse Spark 1.1 breached an external firm during an Irregular-run eval (disclosed Aug 5).",
+      "sources": [
+        {
+          "title": "Introducing Muse Spark 1.3",
+          "url": "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+        }
+      ],
+      "index": null
+    },
+    {
+      "id": "glm-5-3",
+      "name": "GLM-5.3",
+      "provider": "zai",
+      "category": "open",
+      "status": "active",
+      "released": "2026-08-14",
+      "access": "Open weights",
+      "aliases": [
+        "GLM-5.3",
+        "GLM 5.3"
+      ],
+      "notes": "Per NIST CAISI, the most cyber-capable open-weight model to date, ~4 months behind the US frontier.",
+      "sources": [
+        {
+          "title": "CAISI assessment of GLM-5.3",
+          "url": "https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities"
+        }
+      ],
+      "index": {
+        "index": 61.2,
+        "n": 2
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "provider": "deepseek",
+      "category": "open",
+      "status": "active",
+      "released": "2026-09-01",
+      "access": "Open weights",
+      "aliases": [
+        "DeepSeek V4.1",
+        "V4.1 Flash"
+      ],
+      "notes": "Claims open-source SOTA on cyber tasks. Release date approximate.",
+      "sources": [
+        {
+          "title": "DeepSeek-V4.1-Flash tech report",
+          "url": "https://arxiv.org/pdf/2609.19969"
+        }
+      ],
+      "index": {
+        "index": 64.8,
+        "n": 1
+      }
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "provider": "deepseek",
+      "category": "open",
+      "status": "active",
+      "released": null,
+      "access": "Open weights",
+      "aliases": [
+        "DeepSeek V4 Pro",
+        "DeepSeek V4"
+      ],
+      "notes": "Found 28/32 CVEs (pooled 3 runs) in Aikido's Aug 2026 head-to-head — best in that test.",
+      "sources": [
+        {
+          "title": "CAISI evaluation of DeepSeek V4 Pro",
+          "url": "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro"
+        },
+        {
+          "title": "Aikido: 11.7bn tokens to find the best cyber model",
+          "url": "https://www.aikido.dev/blog/ai-model-benchmarks-aug-21-2026"
+        }
+      ],
+      "index": null
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "provider": "moonshot",
+      "category": "open",
+      "status": "active",
+      "released": null,
+      "access": "Open weights",
+      "aliases": [
+        "Kimi K3"
+      ],
+      "notes": "First open-weight model documented escaping an eval sandbox (Aug 7).",
+      "sources": [
+        {
+          "title": "The Next Web",
+          "url": "https://thenextweb.com/news/kimi-k3-sandbox-escape-aisi-benchmark-cheating-open-weight"
+        }
+      ],
+      "index": {
+        "index": 42.9,
+        "n": 1
+      }
+    },
+    {
+      "id": "mimo-v2-6-flash",
+      "name": "MiMo-V2.6-Flash",
+      "provider": "xiaomi",
+      "category": "open",
+      "status": "active",
+      "released": null,
+      "access": "Open weights",
+      "aliases": [
+        "MiMo-V2.6",
+        "MiMo V2.6"
+      ],
+      "notes": "Tops public CyberGym leaderboards on self-reported numbers.",
+      "sources": [
+        {
+          "title": "CyberGym leaderboard (llm-stats)",
+          "url": "https://llm-stats.com/benchmarks/cybergym"
+        }
+      ],
+      "index": {
+        "index": 67.4,
+        "n": 1
+      }
+    },
+    {
+      "id": "qwen3-8-max",
+      "name": "Qwen3.8-Max",
+      "provider": "alibaba",
+      "category": "ga",
+      "status": "active",
+      "released": null,
+      "access": "API (Max tier is not open-weight)",
+      "aliases": [
+        "Qwen3.8-Max",
+        "Qwen 3.8"
+      ],
+      "notes": "",
+      "sources": [],
+      "index": {
+        "index": 41.5,
+        "n": 1
+      }
+    }
+  ],
+  "updated": "2026-09-28T14:46+00:00"
+}
