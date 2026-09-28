@@ -16,7 +16,7 @@ from email.utils import parsedate_to_datetime
 
 import requests
 
-UA = {"User-Agent": "ai-cyber-dashboard/1.0 (+https://github.com/jdelmare/hello-world)"}
+UA = {"User-Agent": "ai-cyber-dashboard/1.0 (+https://github.com/jdelmare/modeltrends)"}
 TIMEOUT = 20
 
 
