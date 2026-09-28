@@ -153,7 +153,11 @@ def merge(upd, today: str, models: dict, benchmarks: dict, incidents: dict,
     ind = {i["id"]: i for i in trends.get("indicators", [])}
     for tp in upd.trend_points:
         i = ind.get(tp.indicator_id)
-        if i and valid_url(tp.source_url) and not any(p["date"] == tp.date for p in i["points"]):
+        # The same finding gets re-reported under different dates; a point is new only if
+        # its date and its (source, value) pair are both unseen.
+        if i and valid_url(tp.source_url) and not any(
+                p["date"] == tp.date or (p["source"] == tp.source_url and p["value"] == tp.value)
+                for p in i["points"]):
             i["points"].append({"date": tp.date, "value": tp.value, "source": tp.source_url})
             i["points"].sort(key=lambda p: p["date"])
             changes.append(f"trend: {tp.indicator_id}={tp.value}")
