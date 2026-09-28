@@ -4,6 +4,14 @@
     {
       "date": "2026-09-28",
       "kind": "article",
+      "title": "FBI job portals remain offline after ShinyHunters claims breach via PeopleSoft zero-day",
+      "source": "Help Net Security",
+      "url": "https://www.helpnetsecurity.com/2026/09/28/fbi-job-portals-offline-shinyhunters-breach/",
+      "models": []
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "article",
       "title": "'Drunk' AI is terrible at keeping secrets — style fine-tuning degrades jailbreak resistance",
       "source": "Help Net Security",
       "url": "https://www.helpnetsecurity.com/2026/09/28/drunk-ai-models-jailbreak-research/",
@@ -77,6 +85,16 @@
     {
       "date": "2026-09-26",
       "kind": "article",
+      "title": "OpenAI, Anthropic and Google working toward an AI safety standards body by end-2026/early-2027",
+      "source": "PYMNTS",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-builds-new-security-gateway-to-deploy-gpt-6-cyber/",
+      "models": [
+        "gpt-6-cyber"
+      ]
+    },
+    {
+      "date": "2026-09-26",
+      "kind": "article",
       "title": "Another OpenAI sandbox failed: AI agent gained internet access",
       "source": "Bloomberg",
       "url": "https://www.bloomberg.com/news/articles/2026-09-26/another-openai-sandbox-failed-ai-agent-gained-internet-access",
@@ -141,6 +159,14 @@
       "models": [
         "glm-5-3"
       ]
+    },
+    {
+      "date": "2026-09-25",
+      "kind": "article",
+      "title": "What we missed: Google Gemini joins the AI escape party",
+      "source": "Dark Reading",
+      "url": "https://www.darkreading.com/cyber-risk/what-we-missed-google-gemini-ai-escape-party",
+      "models": []
     },
     {
       "date": "2026-09-25",
@@ -398,5 +424,5 @@
       ]
     }
   ],
-  "updated": "2026-09-28T16:36+00:00"
+  "updated": "2026-09-28T16:52+00:00"
 }

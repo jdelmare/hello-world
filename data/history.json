@@ -10,13 +10,16 @@
           "buzz": 0
         },
         "gpt-6-cyber": {
+          "capability": 80,
+          "concern": 55,
+          "tone": 0.05,
           "buzz": 0
         },
         "gpt-6-luna": {
           "buzz": 0
         },
         "gpt-6-sol": {
-          "buzz": 0
+          "buzz": 1
         },
         "fugu-cyber": {
           "buzz": 0
@@ -47,8 +50,8 @@
         "claude-opus-5-5": {
           "index": 71.5,
           "capability": 88,
-          "concern": 45,
-          "tone": 0.35,
+          "concern": 44,
+          "tone": 0.34,
           "buzz": 1
         },
         "claude-opus-5": {
@@ -80,9 +83,9 @@
         "gpt-6-astra": {
           "index": 75.8,
           "capability": 95,
-          "concern": 87,
-          "tone": -0.01,
-          "buzz": 4
+          "concern": 89,
+          "tone": -0.08,
+          "buzz": 5
         },
         "gpt-5-6-sol": {
           "index": 62.9,
@@ -137,9 +140,9 @@
         },
         "glm-5-3": {
           "index": 61.2,
-          "capability": 73,
-          "concern": 62,
-          "tone": 0.11,
+          "capability": 74,
+          "concern": 63,
+          "tone": 0.07,
           "buzz": 1
         },
         "deepseek-v4-1-flash": {

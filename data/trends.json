@@ -35,6 +35,11 @@
           "date": "2026-09-17",
           "value": 4.0,
           "source": "https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities"
+        },
+        {
+          "date": "2026-09-28",
+          "value": 4.0,
+          "source": "https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities"
         }
       ],
       "note": "GLM-5.3, the most cyber-capable open-weight model, trails the US frontier by ~4 months on CAISI's aggregate cyber benchmarks."
