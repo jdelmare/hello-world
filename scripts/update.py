@@ -52,6 +52,14 @@ def valid_url(u: str) -> bool:
     return bool(re.match(r"^https?://[^\s]+\.[^\s]+", u or ""))
 
 
+def norm_date(d: str) -> str | None:
+    """YYYY-MM-DD, widening a month-only date to the 1st; None if unparseable."""
+    d = (d or "").strip()
+    if re.fullmatch(r"\d{4}-\d{2}", d):
+        d += "-01"
+    return d if re.fullmatch(r"\d{4}-\d{2}-\d{2}", d) else None
+
+
 def clamp(v, lo, hi):
     return max(lo, min(hi, v))
 
@@ -107,11 +115,13 @@ def merge(upd, today: str, models: dict, benchmarks: dict, incidents: dict,
     seen_titles = {slug(i["title"]) for i in incidents["incidents"]}
     for inc in upd.incidents:
         srcs = refs(inc.sources)
-        if not srcs or any(s["url"] in seen_urls for s in srcs) or slug(inc.title) in seen_titles:
+        date = norm_date(inc.date)
+        if not srcs or not date or any(s["url"] in seen_urls for s in srcs) or slug(inc.title) in seen_titles:
             continue
+        provider = slug(inc.provider)
         incidents["incidents"].insert(0, {
-            "id": f"{inc.date}-{slug(inc.title)[:40]}", "date": inc.date, "type": inc.type,
-            "severity": inc.severity, "provider": slug(inc.provider),
+            "id": f"{date}-{slug(inc.title)[:40]}", "date": date, "type": inc.type,
+            "severity": inc.severity, "provider": provider if provider in models["providers"] else "other",
             "models": [m for m in inc.model_ids if m in known],
             "title": inc.title, "summary": inc.summary, "sources": srcs, "auto": True,
         })

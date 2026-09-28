@@ -32,10 +32,13 @@
       "name": "Xiaomi"
     },
     "shanghai-ai-lab": {
-      "name": "shanghai-ai-lab"
+      "name": "Shanghai AI Lab"
     },
     "sakana": {
-      "name": "sakana"
+      "name": "Sakana AI"
+    },
+    "other": {
+      "name": "Other / cross-industry"
     }
   },
   "models": [
