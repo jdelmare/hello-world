@@ -13,6 +13,7 @@ update.py merges into the data files.
 from __future__ import annotations
 
 import json
+import os
 import sys
 from typing import Literal, Optional
 
@@ -216,12 +217,23 @@ Use only model ids from the registry or from new_models."""
 
 def run(today: str, models: dict, benchmarks: dict, incidents: dict, perception: dict,
         items: list[dict]) -> DailyUpdate | None:
-    client = anthropic.Anthropic()
+    # Organization-level keys (not scoped to a workspace) must name the workspace per request.
+    workspace = os.environ.get("ANTHROPIC_WORKSPACE_ID")
+    client = anthropic.Anthropic(default_headers={"anthropic-workspace-id": workspace} if workspace else None)
     digest = _registry_digest(models, benchmarks, incidents, perception)
     try:
         brief = research(client, today, digest)
         log(f"research brief: {len(brief)} chars")
     except anthropic.APIStatusError as e:
-        log(f"research pass failed ({e.status_code}); continuing with feeds only")
+        log(f"research pass failed ({e.status_code}: {e.message}); continuing with feeds only")
         brief = ""
-    return extract(client, today, digest, brief, items)
+    except anthropic.APIConnectionError as e:
+        log(f"research pass could not connect ({e}); continuing with feeds only")
+        brief = ""
+    try:
+        return extract(client, today, digest, brief, items)
+    except anthropic.APIStatusError as e:
+        log(f"extraction pass failed ({e.status_code}: {e.message}); keeping feed-only results")
+    except anthropic.APIConnectionError as e:
+        log(f"extraction pass could not connect ({e}); keeping feed-only results")
+    return None

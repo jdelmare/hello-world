@@ -30,6 +30,7 @@ Anything the pipeline adds by itself carries an `auto` badge until a person revi
 1. **Settings → Pages → Source: GitHub Actions**
 2. **Settings → Secrets → Actions**:
    - `ANTHROPIC_API_KEY` (required for the Claude analysis; without it the run collects feeds and counts buzz only)
+   - `ANTHROPIC_WORKSPACE_ID` (only if your API key is not scoped to a workspace; the API then rejects requests without it. Find the ID under Console → Settings → Workspaces)
    - `BSKY_HANDLE`, `BSKY_APP_PASSWORD` (optional, adds Bluesky search)
 3. Run the workflow once from the Actions tab (**Run workflow**).
 

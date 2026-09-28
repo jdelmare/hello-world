@@ -215,7 +215,7 @@ def main() -> None:
                 changes = merge(upd, today, models, benchmarks, incidents, perception, news, trends)
                 changes.insert(0, upd.run_summary)
                 mode = "claude"
-        else:
+        if mode != "claude":
             # Without Claude: surface the most-engaged items that mention a tracked model.
             top = sorted((it for it in items if it["models"]),
                          key=lambda it: it.get("engagement", 0), reverse=True)[:10]

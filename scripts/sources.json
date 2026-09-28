@@ -1,5 +1,5 @@
 {
-  "_doc": "Sources the daily pipeline collects from. kind drives the icon/label on the dashboard. Add or remove feeds freely; failures are logged and skipped.",
+  "_doc": "Sources the daily pipeline collects from. kind drives the icon/label on the dashboard. Add or remove feeds freely; failures are logged and skipped. Reddit's JSON API blocks GitHub Actions runners (403), so the reddit list is empty; the Claude research pass covers Reddit discussion instead.",
   "rss": [
     {
       "name": "OpenAI News",
@@ -9,16 +9,6 @@
     {
       "name": "Google DeepMind",
       "url": "https://deepmind.google/blog/rss.xml",
-      "kind": "official"
-    },
-    {
-      "name": "Google Threat Intelligence",
-      "url": "https://cloud.google.com/blog/topics/threat-intelligence/rss/",
-      "kind": "official"
-    },
-    {
-      "name": "UK AISI",
-      "url": "https://www.aisi.gov.uk/blog/rss.xml",
       "kind": "official"
     },
     {
@@ -58,7 +48,7 @@
     },
     {
       "name": "Don't Worry About the Vase (Zvi)",
-      "url": "https://thezvi.substack.com/feed",
+      "url": "https://thezvi.wordpress.com/feed/",
       "kind": "blog"
     },
     {
@@ -92,11 +82,6 @@
       "kind": "podcast"
     },
     {
-      "name": "Unsupervised Learning",
-      "url": "https://feeds.megaphone.fm/unsupervised-learning",
-      "kind": "podcast"
-    },
-    {
       "name": "arXiv cs.CR (LLM)",
       "url": "https://export.arxiv.org/api/query?search_query=cat:cs.CR+AND+(abs:LLM+OR+abs:%22language+model%22)&sortBy=submittedDate&sortOrder=descending&max_results=40",
       "kind": "paper"
@@ -112,24 +97,7 @@
     "Gemini cyber",
     "open weights cyber"
   ],
-  "reddit": [
-    {
-      "sub": "netsec",
-      "query": "AI OR LLM OR model"
-    },
-    {
-      "sub": "cybersecurity",
-      "query": "AI model"
-    },
-    {
-      "sub": "LocalLLaMA",
-      "query": "cyber OR security OR exploit"
-    },
-    {
-      "sub": "singularity",
-      "query": "cyber OR sandbox OR exploit"
-    }
-  ],
+  "reddit": [],
   "bluesky_queries": [
     "AI cyber model",
     "sandbox escape",
