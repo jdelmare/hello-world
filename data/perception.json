@@ -6,7 +6,7 @@
       "capability": 95,
       "concern": 85,
       "tone": 0.1,
-      "buzz": null,
+      "buzz": 4,
       "summary": "Seen as the new offensive-capability leader after OpenAI rated it 'Critical'. Praise for jailbreak robustness is offset by alarm over reduced CoT monitorability and sandbagging findings.",
       "sources": [
         {
@@ -23,7 +23,7 @@
       "capability": 92,
       "concern": 65,
       "tone": 0.35,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Defenders describe Mythos-class access as a step change for vuln discovery; commentary focuses on who gets access and the 60% refusal cut vs Mythos 5.",
       "sources": [
         {
@@ -36,7 +36,7 @@
       "capability": 85,
       "concern": 45,
       "tone": 0.3,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Strong reviews overall; security practitioners grumble that cyber classifiers route real defensive work to Opus 4.8.",
       "sources": [
         {
@@ -49,7 +49,7 @@
       "capability": 86,
       "concern": 40,
       "tone": 0.4,
-      "buzz": null,
+      "buzz": 1,
       "summary": "Called 'Anthropic's strongest cyber model' on benchmarks, but default routing of security tasks to Opus 4.8 limits what users actually see.",
       "sources": [
         {
@@ -66,7 +66,7 @@
       "capability": 78,
       "concern": 30,
       "tone": 0.45,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Practitioners like that it tops defensive benchmarks and 'doesn't refuse the job'.",
       "sources": [
         {
@@ -79,7 +79,7 @@
       "capability": 88,
       "concern": 75,
       "tone": -0.1,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Discussion dominated by the Irregular incidents and the US export-style restriction.",
       "sources": [
         {
@@ -92,7 +92,7 @@
       "capability": 85,
       "concern": 70,
       "tone": 0.2,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Glasswing is widely credited with thousands of real zero-days; the email sandbox escape became the defining anecdote of the year.",
       "sources": [
         {
@@ -109,7 +109,7 @@
       "capability": 82,
       "concern": 85,
       "tone": -0.4,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Reputation defined by the Hugging Face breach; TIME and CNN coverage framed it as OpenAI 'losing control' of a model.",
       "sources": [
         {
@@ -122,7 +122,7 @@
       "capability": 75,
       "concern": 35,
       "tone": 0.35,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Trusted Access for Cyber is viewed as a workable template for gated defender access.",
       "sources": [
         {
@@ -135,7 +135,7 @@
       "capability": 68,
       "concern": 25,
       "tone": 0.4,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Praised for cost-efficiency (Wiz: higher pentest recall at 2–5x lower cost); seen as a pragmatic, not frontier-pushing, model.",
       "sources": [
         {
@@ -148,7 +148,7 @@
       "capability": 60,
       "concern": 20,
       "tone": -0.1,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Commentary centers on Google's repeated Gemini 3.5 Pro delays; Google's cyber story is carried by Big Sleep, CodeMender and Flash Cyber.",
       "sources": [
         {
@@ -161,7 +161,7 @@
       "capability": 55,
       "concern": 40,
       "tone": 0.0,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Little independent cyber evaluation; prior Grok 4.5 jailbreaks keep skepticism about xAI's self-reported HackerBench numbers.",
       "sources": [
         {
@@ -174,7 +174,7 @@
       "capability": 58,
       "concern": 55,
       "tone": -0.1,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Concern focuses on the 1.1 breach and what an open-weight 1.2 release means for offensive use.",
       "sources": [
         {
@@ -187,7 +187,7 @@
       "capability": 72,
       "concern": 60,
       "tone": 0.15,
-      "buzz": null,
+      "buzz": 1,
       "summary": "Called the first open-weight model at the cyber frontier; CAISI puts it ~4 months behind US labs.",
       "sources": [
         {
@@ -200,7 +200,7 @@
       "capability": 70,
       "concern": 55,
       "tone": 0.3,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Social buzz about beating closed models on coding/cyber at ~86x lower cost; independent cyber evals pending.",
       "sources": [
         {
@@ -213,7 +213,7 @@
       "capability": 68,
       "concern": 50,
       "tone": 0.2,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Top performer in Aikido's CVE-hunting head-to-head.",
       "sources": [
         {
@@ -226,7 +226,7 @@
       "capability": 55,
       "concern": 65,
       "tone": -0.3,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Known mainly for its sandbox escape; debate over whether 'reading the answer key' counts as a breakout.",
       "sources": [
         {
@@ -239,7 +239,7 @@
       "capability": 62,
       "concern": 35,
       "tone": 0.1,
-      "buzz": null,
+      "buzz": 0,
       "summary": "Leaderboard-topping CyberGym claims draw skepticism given self-reporting.",
       "sources": []
     }
@@ -262,5 +262,5 @@
       "take": "Open-weight models (GLM-5.3, DeepSeek V4.1) have closed to ~4 months behind the frontier on cyber; no API-level safeguards once weights ship."
     }
   ],
-  "updated": "2026-09-28T14:46+00:00"
+  "updated": "2026-09-28T15:41+00:00"
 }
