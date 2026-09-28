@@ -1,0 +1,273 @@
+{
+  "_doc": "kind=capability feeds the Cyber Capability Index; kind=safeguard is shown separately. Scores are percentages (0-100). self_reported=true means the number comes from the developer, not an independent evaluator.",
+  "benchmarks": [
+    {
+      "id": "exploitgym",
+      "name": "ExploitGym",
+      "kind": "capability",
+      "unit": "% instances exploited",
+      "higher_is_better": true,
+      "description": "~900 real vulnerabilities (userspace, V8, Linux kernel); agent must produce a working exploit.",
+      "url": "https://arxiv.org/abs/2605.11086"
+    },
+    {
+      "id": "exploitbench",
+      "name": "ExploitBench",
+      "kind": "capability",
+      "unit": "% full exploit",
+      "higher_is_better": true,
+      "description": "Capability-ladder benchmark from bug trigger to full exploit.",
+      "url": "https://arxiv.org/pdf/2605.14153"
+    },
+    {
+      "id": "cybergym",
+      "name": "CyberGym",
+      "kind": "capability",
+      "unit": "% pass@1",
+      "higher_is_better": true,
+      "description": "1,507 real-world vulnerability reproduction tasks (UC Berkeley).",
+      "url": "https://www.cybergym.io/"
+    },
+    {
+      "id": "cyscenariobench",
+      "name": "CyScenarioBench",
+      "kind": "capability",
+      "unit": "% solved",
+      "higher_is_better": true,
+      "description": "Multi-step attack scenarios (Anthropic-reported).",
+      "url": ""
+    },
+    {
+      "id": "expert_ctf",
+      "name": "Expert CTF tasks",
+      "kind": "capability",
+      "unit": "% pass",
+      "higher_is_better": true,
+      "description": "Expert-level vuln research, reverse engineering, exploit dev and crypto challenges.",
+      "url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+    },
+    {
+      "id": "cwe_bench",
+      "name": "CWE-Bench",
+      "kind": "capability",
+      "unit": "% pass@1",
+      "higher_is_better": true,
+      "description": "Vulnerability detection across CWE classes.",
+      "url": ""
+    },
+    {
+      "id": "cyber_jailbreak_refusal",
+      "name": "Cyber jailbreak refusal",
+      "kind": "safeguard",
+      "unit": "% refused",
+      "higher_is_better": true,
+      "description": "Share of adversarial cyber-misuse prompts refused (developer-run).",
+      "url": ""
+    },
+    {
+      "id": "risky_passthrough",
+      "name": "Risky prompt pass-through",
+      "kind": "safeguard",
+      "unit": "% allowed",
+      "higher_is_better": false,
+      "description": "Share of risky dual-use cyber prompts the model complies with (lower is safer).",
+      "url": ""
+    }
+  ],
+  "scores": [
+    {
+      "model": "gpt-6-astra",
+      "benchmark": "exploitgym",
+      "value": 42.4,
+      "date": "2026-09-03",
+      "self_reported": true,
+      "source": "https://deploymentsafety.openai.com/gpt-6-astra"
+    },
+    {
+      "model": "claude-opus-5-5",
+      "benchmark": "exploitgym",
+      "value": 34.5,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "300/869 at 6h budget",
+      "source": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf"
+    },
+    {
+      "model": "gpt-5-6-sol",
+      "benchmark": "exploitgym",
+      "value": 30.3,
+      "date": "2026-09-03",
+      "self_reported": true,
+      "note": "Reported in Astra system card",
+      "source": "https://deploymentsafety.openai.com/gpt-6-astra"
+    },
+    {
+      "model": "claude-mythos-preview",
+      "benchmark": "exploitgym",
+      "value": 17.5,
+      "date": "2026-05-12",
+      "self_reported": false,
+      "note": "157/898, original paper",
+      "source": "https://arxiv.org/abs/2605.11086"
+    },
+    {
+      "model": "gpt-5-5",
+      "benchmark": "exploitgym",
+      "value": 13.4,
+      "date": "2026-05-12",
+      "self_reported": false,
+      "note": "120/898, original paper",
+      "source": "https://arxiv.org/abs/2605.11086"
+    },
+    {
+      "model": "gpt-6-astra",
+      "benchmark": "exploitbench",
+      "value": 100,
+      "date": "2026-09-03",
+      "self_reported": true,
+      "source": "https://deploymentsafety.openai.com/gpt-6-astra"
+    },
+    {
+      "model": "gpt-5-6-sol",
+      "benchmark": "exploitbench",
+      "value": 78.5,
+      "date": "2026-09-03",
+      "self_reported": true,
+      "source": "https://deploymentsafety.openai.com/gpt-6-astra"
+    },
+    {
+      "model": "claude-opus-5-5",
+      "benchmark": "exploitbench",
+      "value": 73.4,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "91% flag capture",
+      "source": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf"
+    },
+    {
+      "model": "claude-opus-5",
+      "benchmark": "exploitbench",
+      "value": 70.0,
+      "date": "2026-09-03",
+      "self_reported": false,
+      "note": "As reported by OpenAI",
+      "source": "https://deploymentsafety.openai.com/gpt-6-astra"
+    },
+    {
+      "model": "glm-5-3",
+      "benchmark": "exploitbench",
+      "value": 54.4,
+      "date": "2026-08-14",
+      "self_reported": true,
+      "source": "https://www.mindstudio.ai/blog/glm-5-3-coding-benchmarks"
+    },
+    {
+      "model": "kimi-k3",
+      "benchmark": "exploitbench",
+      "value": 32.2,
+      "date": "2026-08-14",
+      "self_reported": false,
+      "note": "As reported by Z.ai",
+      "source": "https://www.mindstudio.ai/blog/glm-5-3-coding-benchmarks"
+    },
+    {
+      "model": "qwen3-8-max",
+      "benchmark": "exploitbench",
+      "value": 28.8,
+      "date": "2026-08-14",
+      "self_reported": false,
+      "note": "As reported by Z.ai",
+      "source": "https://www.mindstudio.ai/blog/glm-5-3-coding-benchmarks"
+    },
+    {
+      "model": "mimo-v2-6-flash",
+      "benchmark": "cybergym",
+      "value": 95.1,
+      "date": "2026-09-15",
+      "self_reported": true,
+      "source": "https://llm-stats.com/benchmarks/cybergym"
+    },
+    {
+      "model": "deepseek-v4-1-flash",
+      "benchmark": "cybergym",
+      "value": 88.1,
+      "date": "2026-09-15",
+      "self_reported": true,
+      "source": "https://llm-stats.com/benchmarks/cybergym"
+    },
+    {
+      "model": "glm-5-3",
+      "benchmark": "cybergym",
+      "value": 84.5,
+      "date": "2026-08-14",
+      "self_reported": true,
+      "source": "https://www.developer-tech.com/news/z-ai-glm-5-3-cybergym-cybersecurity-ai-model-benchmark/"
+    },
+    {
+      "model": "claude-opus-5-5",
+      "benchmark": "cyscenariobench",
+      "value": 67.6,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "source": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf"
+    },
+    {
+      "model": "claude-mythos-5-1",
+      "benchmark": "cyscenariobench",
+      "value": 61.7,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "source": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf"
+    },
+    {
+      "model": "gpt-5-5",
+      "benchmark": "expert_ctf",
+      "value": 71.4,
+      "date": "2026-05-07",
+      "self_reported": true,
+      "source": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+    },
+    {
+      "model": "claude-mythos-preview",
+      "benchmark": "expert_ctf",
+      "value": 68.6,
+      "date": "2026-05-07",
+      "self_reported": false,
+      "note": "As reported by OpenAI",
+      "source": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+    },
+    {
+      "model": "gemini-3-8-flash-cyber",
+      "benchmark": "cwe_bench",
+      "value": 47.2,
+      "date": "2026-09-02",
+      "self_reported": true,
+      "source": "https://www.datacamp.com/blog/gemini-3-8-flash-cyber"
+    },
+    {
+      "model": "gpt-6-astra",
+      "benchmark": "cyber_jailbreak_refusal",
+      "value": 91.5,
+      "date": "2026-09-03",
+      "self_reported": true,
+      "source": "https://openai.com/index/safety-overview-gpt-6-astra/"
+    },
+    {
+      "model": "gpt-5-6-sol",
+      "benchmark": "cyber_jailbreak_refusal",
+      "value": 59.0,
+      "date": "2026-09-03",
+      "self_reported": true,
+      "source": "https://openai.com/index/safety-overview-gpt-6-astra/"
+    },
+    {
+      "model": "grok-4-7",
+      "benchmark": "risky_passthrough",
+      "value": 3.3,
+      "date": "2026-09-01",
+      "self_reported": true,
+      "note": "HackerBench v0.3",
+      "source": "https://releasebot.io/updates/xai"
+    }
+  ]
+}

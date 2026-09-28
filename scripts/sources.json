@@ -1,0 +1,145 @@
+{
+  "_doc": "Sources the daily pipeline collects from. kind drives the icon/label on the dashboard. Add or remove feeds freely; failures are logged and skipped.",
+  "rss": [
+    {
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss.xml",
+      "kind": "official"
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "kind": "official"
+    },
+    {
+      "name": "Google Threat Intelligence",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/rss/",
+      "kind": "official"
+    },
+    {
+      "name": "UK AISI",
+      "url": "https://www.aisi.gov.uk/blog/rss.xml",
+      "kind": "official"
+    },
+    {
+      "name": "Help Net Security",
+      "url": "https://www.helpnetsecurity.com/feed/",
+      "kind": "article"
+    },
+    {
+      "name": "SecurityWeek",
+      "url": "https://www.securityweek.com/feed/",
+      "kind": "article"
+    },
+    {
+      "name": "Dark Reading",
+      "url": "https://www.darkreading.com/rss.xml",
+      "kind": "article"
+    },
+    {
+      "name": "The Hacker News",
+      "url": "https://feeds.feedburner.com/TheHackersNews",
+      "kind": "article"
+    },
+    {
+      "name": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/feed/",
+      "kind": "article"
+    },
+    {
+      "name": "The Register Security",
+      "url": "https://www.theregister.com/security/headlines.atom",
+      "kind": "article"
+    },
+    {
+      "name": "Schneier on Security",
+      "url": "https://www.schneier.com/feed/atom/",
+      "kind": "blog"
+    },
+    {
+      "name": "Don't Worry About the Vase (Zvi)",
+      "url": "https://thezvi.substack.com/feed",
+      "kind": "blog"
+    },
+    {
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/",
+      "kind": "blog"
+    },
+    {
+      "name": "Interconnects",
+      "url": "https://www.interconnects.ai/feed",
+      "kind": "blog"
+    },
+    {
+      "name": "Daniel Miessler",
+      "url": "https://danielmiessler.com/feed",
+      "kind": "blog"
+    },
+    {
+      "name": "Latent Space",
+      "url": "https://www.latent.space/feed",
+      "kind": "podcast"
+    },
+    {
+      "name": "Risky Business",
+      "url": "https://risky.biz/feeds/risky-business/",
+      "kind": "podcast"
+    },
+    {
+      "name": "Cognitive Revolution",
+      "url": "https://feeds.megaphone.fm/RINTP3108857801",
+      "kind": "podcast"
+    },
+    {
+      "name": "Unsupervised Learning",
+      "url": "https://feeds.megaphone.fm/unsupervised-learning",
+      "kind": "podcast"
+    },
+    {
+      "name": "arXiv cs.CR (LLM)",
+      "url": "https://export.arxiv.org/api/query?search_query=cat:cs.CR+AND+(abs:LLM+OR+abs:%22language+model%22)&sortBy=submittedDate&sortOrder=descending&max_results=40",
+      "kind": "paper"
+    }
+  ],
+  "hn_queries": [
+    "AI cyber",
+    "AI exploit",
+    "sandbox escape AI",
+    "zero-day LLM",
+    "Mythos",
+    "GPT-6",
+    "Gemini cyber",
+    "open weights cyber"
+  ],
+  "reddit": [
+    {
+      "sub": "netsec",
+      "query": "AI OR LLM OR model"
+    },
+    {
+      "sub": "cybersecurity",
+      "query": "AI model"
+    },
+    {
+      "sub": "LocalLLaMA",
+      "query": "cyber OR security OR exploit"
+    },
+    {
+      "sub": "singularity",
+      "query": "cyber OR sandbox OR exploit"
+    }
+  ],
+  "bluesky_queries": [
+    "AI cyber model",
+    "sandbox escape",
+    "Mythos",
+    "GPT-6 Astra",
+    "AI zero-day"
+  ],
+  "huggingface_search": [
+    "cyber",
+    "security",
+    "pentest"
+  ]
+}

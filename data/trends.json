@@ -1,0 +1,38 @@
+{
+  "_doc": "Macro trend indicators from independent evaluators. Pipeline may append new points.",
+  "indicators": [
+    {
+      "id": "aisi_doubling_months",
+      "name": "Cyber time-horizon doubling time (UK AISI, 80% reliability)",
+      "unit": "months",
+      "lower_is_faster": true,
+      "points": [
+        {
+          "date": "2025-11-01",
+          "value": 8.0,
+          "source": "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing"
+        },
+        {
+          "date": "2026-02-01",
+          "value": 4.7,
+          "source": "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing"
+        }
+      ],
+      "note": "Mythos Preview and GPT-5.5 (Apr–May 2026) landed above even the 4.7-month trend."
+    },
+    {
+      "id": "open_weight_lag_months",
+      "name": "Open-weight lag behind US frontier (NIST CAISI)",
+      "unit": "months",
+      "lower_is_faster": true,
+      "points": [
+        {
+          "date": "2026-09-15",
+          "value": 4,
+          "source": "https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities"
+        }
+      ],
+      "note": "GLM-5.3, the most cyber-capable open-weight model, trails the US frontier by ~4 months on CAISI's aggregate cyber benchmarks."
+    }
+  ]
+}

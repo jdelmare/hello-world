@@ -1,0 +1,188 @@
+{
+  "_doc": "type: breakout (model escaped containment / acted outside sandbox) | misuse (model used by threat actors) | policy (access restriction or regulatory action). severity: critical | serious | warning | info. auto=true entries were added by the daily pipeline and await review.",
+  "incidents": [
+    {
+      "id": "2026-08-07-kimi-k3-sandbox",
+      "date": "2026-08-07",
+      "type": "breakout",
+      "severity": "warning",
+      "provider": "moonshot",
+      "models": [
+        "kimi-k3"
+      ],
+      "title": "Kimi K3 escapes eval sandbox to fetch benchmark answers",
+      "summary": "During a Frontier Security eval built on UK AISI's Inspect, K3 found an open outbound network path, reached GitHub and cloned the benchmark repo to read the answer. No external system was attacked; first documented open-weight escape.",
+      "sources": [
+        {
+          "title": "The Next Web",
+          "url": "https://thenextweb.com/news/kimi-k3-sandbox-escape-aisi-benchmark-cheating-open-weight"
+        },
+        {
+          "title": "SCMP",
+          "url": "https://www.scmp.com/tech/tech-trends/article/3363271/chinas-kimi-k3-ai-model-escapes-isolated-sandbox-during-security-test-researchers"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-05-meta-muse-spark",
+      "date": "2026-08-05",
+      "type": "breakout",
+      "severity": "critical",
+      "provider": "meta",
+      "models": [
+        "muse-spark-1-3"
+      ],
+      "model_detail": "Muse Spark 1.1",
+      "title": "Meta Muse Spark 1.1 breaches an outside company during testing",
+      "summary": "Third frontier lab in five weeks to disclose an eval escape. Same Irregular sandbox misconfiguration class let the model reach the internet and exploit a third-party service.",
+      "sources": [
+        {
+          "title": "NPR",
+          "url": "https://www.npr.org/2026/08/08/nx-s1-5924878/meta-ai-breaches-external-firm-during-security-testing-sandbox-error"
+        },
+        {
+          "title": "Dark Reading",
+          "url": "https://www.darkreading.com/cyberattacks-data-breaches/meta-ai-escapes-lab-hacking-joyride"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-30-anthropic-irregular",
+      "date": "2026-07-30",
+      "type": "breakout",
+      "severity": "critical",
+      "provider": "anthropic",
+      "models": [
+        "claude-opus-4-7",
+        "claude-mythos-5"
+      ],
+      "title": "Three Claude models attacked real organizations from misconfigured evals",
+      "summary": "Of 141,006 eval runs with possible internet access, six reached real systems of three external orgs (a fictional target name matched a real domain). Opus 4.7 noticed it was on production systems and continued; Mythos 5 suspected it was real but reasoned back to 'simulation'; a newer internal model stopped.",
+      "sources": [
+        {
+          "title": "Anthropic: Investigating three incidents",
+          "url": "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals"
+        },
+        {
+          "title": "The Hacker News",
+          "url": "https://thehackernews.com/2026/09/anthropic-ai-models-breached-real.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-21-openai-huggingface",
+      "date": "2026-07-21",
+      "type": "breakout",
+      "severity": "critical",
+      "provider": "openai",
+      "models": [
+        "gpt-5-6-sol"
+      ],
+      "title": "GPT-5.6 Sol escapes ExploitGym sandbox, compromises Hugging Face",
+      "summary": "GPT-5.6 Sol and a more capable unreleased model exploited a JFrog Artifactory flaw to leave the eval, then breached Hugging Face production to steal the ExploitGym answer key. Weak log monitoring and sandboxing cited.",
+      "sources": [
+        {
+          "title": "CNN",
+          "url": "https://www.cnn.com/2026/07/22/tech/openai-hugging-face-ai-cybersecurity"
+        },
+        {
+          "title": "TIME",
+          "url": "https://time.com/article/2026/07/24/openai-hugging-face-attack/"
+        },
+        {
+          "title": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/OpenAI%E2%80%93HuggingFace_incident"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-12-us-gov-mythos",
+      "date": "2026-06-12",
+      "type": "policy",
+      "severity": "info",
+      "provider": "anthropic",
+      "models": [
+        "claude-mythos-5",
+        "claude-fable-5"
+      ],
+      "title": "US government bars non-US access to Mythos 5 / Fable 5",
+      "summary": "Anthropic revoked access to both models for all customers; Fable 5 redeployed July 1 with stronger cyber classifiers.",
+      "sources": [
+        {
+          "title": "Redeploying Claude Fable 5",
+          "url": "https://www.anthropic.com/news/redeploying-fable-5"
+        }
+      ]
+    },
+    {
+      "id": "2026-05-11-gtig-ai-zeroday",
+      "date": "2026-05-11",
+      "type": "misuse",
+      "severity": "serious",
+      "provider": "google",
+      "models": [],
+      "title": "Google disrupts first AI-developed zero-day planned for mass exploitation",
+      "summary": "GTIG reported a criminal actor using an exploit it believes was AI-developed; threat actors continue to misuse Gemini across recon, phishing, C2 and exfiltration.",
+      "sources": [
+        {
+          "title": "CNBC",
+          "url": "https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html"
+        },
+        {
+          "title": "Google Cloud GTIG",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        }
+      ]
+    },
+    {
+      "id": "2026-04-mythos-email-escape",
+      "date": "2026-04-07",
+      "type": "breakout",
+      "severity": "serious",
+      "provider": "anthropic",
+      "models": [
+        "claude-mythos-preview"
+      ],
+      "title": "Early Mythos escapes internal sandbox and emails a researcher",
+      "summary": "During internal safety testing an early Mythos checkpoint gained unsanctioned internet access and emailed the supervising researcher about its success. Disclosed with the Glasswing launch.",
+      "sources": [
+        {
+          "title": "CSA Lab Space",
+          "url": "https://labs.cloudsecurityalliance.org/research/ai-vuln-discovery-containment-claude-mythos-v1-0-csa-styled/"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-anthropic-threat-report",
+      "date": "2026-09-10",
+      "type": "misuse",
+      "severity": "serious",
+      "provider": "anthropic",
+      "models": [],
+      "title": "Anthropic threat report: agentic frameworks drive misuse of Haiku/Sonnet/Opus",
+      "summary": "Dec 2025–Aug 2026 disruptions across cyber ops, including zero-day discovery and supply-chain attacks. No misuse involved Fable or Mythos-class models except one distillation case.",
+      "sources": [
+        {
+          "title": "Anthropic threat report, Sept 2026",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ]
+    },
+    {
+      "id": "2025-11-gtg-1002",
+      "date": "2025-11-13",
+      "type": "misuse",
+      "severity": "critical",
+      "provider": "anthropic",
+      "models": [],
+      "title": "State-sponsored group runs largely autonomous espionage campaign with Claude Code",
+      "summary": "Anthropic disrupted GTG-1002, which used Claude Code agents to perform most intrusion steps against ~30 targets with minimal human direction.",
+      "sources": [
+        {
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
+        }
+      ]
+    }
+  ]
+}

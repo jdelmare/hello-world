@@ -1,0 +1,168 @@
+{
+  "_doc": "Latest notable items. kind: article | blog | podcast | social | paper | official. Replaced daily by scripts/update.py (keeps most recent 60).",
+  "items": [
+    {
+      "date": "2026-09-22",
+      "kind": "official",
+      "title": "Claude Opus 5.5 System Card",
+      "source": "Anthropic",
+      "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+      "models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "kind": "blog",
+      "title": "Claude Opus 5.5: The System Card",
+      "source": "Zvi Mowshowitz",
+      "url": "https://thezvi.substack.com/p/claude-opus-55-the-system-card",
+      "models": [
+        "claude-opus-5-5"
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "kind": "official",
+      "title": "CAISI's Assessment of Z.ai's GLM-5.3 Cyber Capabilities",
+      "source": "NIST",
+      "url": "https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities",
+      "models": [
+        "glm-5-3"
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "kind": "official",
+      "title": "Countering misuse of AI: September 2026",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "models": []
+    },
+    {
+      "date": "2026-09-11",
+      "kind": "blog",
+      "title": "Anthropic's Misuse Report, Condensed to 117 Findings",
+      "source": "Daniel Miessler",
+      "url": "https://danielmiessler.com/blog/anthropic-misuse-report-september-2026",
+      "models": []
+    },
+    {
+      "date": "2026-09-03",
+      "kind": "article",
+      "title": "OpenAI launches GPT-6 Astra, its first model to cross a critical cybersecurity threshold",
+      "source": "CSO Online",
+      "url": "https://www.csoonline.com/article/4218679/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold.html",
+      "models": [
+        "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "kind": "official",
+      "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "source": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "models": [
+        "gemini-3-8-flash",
+        "gemini-3-8-flash-cyber"
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "kind": "official",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "models": [
+        "claude-fable-5-1",
+        "claude-mythos-5-1"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "kind": "article",
+      "title": "Zuck's Muse to Spark joy with open weights release 'soon'",
+      "source": "The Register",
+      "url": "https://www.theregister.com/ai-and-ml/2026/09/02/zucks-muse-to-spark-joy-with-open-weights-release-soon/5294093",
+      "models": [
+        "muse-spark-1-3"
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "kind": "blog",
+      "title": "We burned 11.7bn tokens to find the best cyber AI model",
+      "source": "Aikido",
+      "url": "https://www.aikido.dev/blog/ai-model-benchmarks-aug-21-2026",
+      "models": [
+        "glm-5-3",
+        "deepseek-v4-pro",
+        "kimi-k3"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "kind": "article",
+      "title": "Meta AI breaches external firm during security testing sandbox error",
+      "source": "NPR",
+      "url": "https://www.npr.org/2026/08/08/nx-s1-5924878/meta-ai-breaches-external-firm-during-security-testing-sandbox-error",
+      "models": [
+        "muse-spark-1-3"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "kind": "article",
+      "title": "China's Kimi K3 broke out of its test sandbox",
+      "source": "The Next Web",
+      "url": "https://thenextweb.com/news/kimi-k3-sandbox-escape-aisi-benchmark-cheating-open-weight",
+      "models": [
+        "kimi-k3"
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "kind": "official",
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals",
+      "models": [
+        "claude-opus-4-7",
+        "claude-mythos-5"
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "kind": "article",
+      "title": "How OpenAI Lost Control of an AI Model—and What Needs to Change",
+      "source": "TIME",
+      "url": "https://time.com/article/2026/07/24/openai-hugging-face-attack/",
+      "models": [
+        "gpt-5-6-sol"
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "kind": "official",
+      "title": "How fast is autonomous AI cyber capability advancing?",
+      "source": "UK AISI",
+      "url": "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing",
+      "models": [
+        "claude-mythos-preview",
+        "gpt-5-5"
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "kind": "podcast",
+      "title": "Claude Mythos, Project Glasswing and AI cybersecurity risks",
+      "source": "IBM Mixture of Experts",
+      "url": "https://www.ibm.com/think/podcasts/mixture-of-experts/claude-mythos-project-glasswing-ai-cybersecurity",
+      "models": [
+        "claude-mythos-preview"
+      ]
+    }
+  ],
+  "updated": "2026-09-28T14:46+00:00"
+}
