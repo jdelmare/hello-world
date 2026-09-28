@@ -30,9 +30,86 @@
     },
     "xiaomi": {
       "name": "Xiaomi"
+    },
+    "shanghai-ai-lab": {
+      "name": "shanghai-ai-lab"
+    },
+    "sakana": {
+      "name": "sakana"
     }
   },
   "models": [
+    {
+      "id": "fugu-cyber",
+      "name": "Fugu-Cyber",
+      "provider": "sakana",
+      "category": "gated",
+      "status": "active",
+      "released": "2026-07-21",
+      "access": "Gated / API, cyber-specialist orchestration model",
+      "aliases": [
+        "Fugu Cyber"
+      ],
+      "notes": "Backfill: a cyber-specific variant released in July that the dashboard had not been tracking. Now appearing in third-party CyberGym listings; no primary-sourced score captured yet.",
+      "sources": [
+        {
+          "title": "Sakana AI — Fugu-Cyber release",
+          "url": "https://sakana.ai/fugu-cyber-release/"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": null
+    },
+    {
+      "id": "atria-dawn-preview",
+      "name": "Atria Dawn Preview",
+      "provider": "shanghai-ai-lab",
+      "category": "open",
+      "status": "active",
+      "released": "2026-09-11",
+      "access": "Open weights / GitHub release, technical report ~2026-09-14",
+      "aliases": [
+        "Atria Dawn"
+      ],
+      "notes": "744B agentic MoE. Agentic focus makes it cyber-relevant; now appearing on third-party CyberGym listings but no primary-sourced cyber score yet. Tracked but unscored.",
+      "sources": [
+        {
+          "title": "Atria Dawn Preview technical report (arXiv)",
+          "url": "https://arxiv.org/html/2609.15818v1"
+        },
+        {
+          "title": "Shanghai AI Lab ships Atria Dawn Preview, a 744B agentic MoE",
+          "url": "https://aiweekly.co/alerts/shanghai-ai-lab-ships-atria-dawn-preview-a-744b-agentic-moe"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": null
+    },
+    {
+      "id": "mimo-v2-6-pro",
+      "name": "MiMo-V2.6-Pro",
+      "provider": "xiaomi",
+      "category": "open",
+      "status": "active",
+      "released": "2026-09-22",
+      "access": "Open weights",
+      "aliases": [
+        "MiMo V2.6 Pro"
+      ],
+      "notes": "Flagship open-weight release sitting above the already-tracked MiMo-V2.6-Flash; reported to lead open-weight rankings. No cyber-specific benchmark number sourced yet — tracked but unscored. Coverage so far is aggregator-level; a Xiaomi primary would strengthen this entry.",
+      "sources": [
+        {
+          "title": "Xiaomi's new flagship model leads open-weight rankings",
+          "url": "https://www.unite.ai/xiaomis-new-flagship-model-leads-open-weight-rankings-with-a-score-of-46/"
+        },
+        {
+          "title": "LLM release timeline",
+          "url": "https://llmgateway.io/timeline"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": null
+    },
     {
       "id": "claude-mythos-5-1",
       "name": "Claude Mythos 5.1",
@@ -565,5 +642,5 @@
       }
     }
   ],
-  "updated": "2026-09-28T16:00+00:00"
+  "updated": "2026-09-28T16:13+00:00"
 }

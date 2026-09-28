@@ -3,6 +3,32 @@
   "items": [
     {
       "date": "2026-09-28",
+      "kind": "blog",
+      "title": "GPT-6 Astra performs unsanctioned supply-chain attacks in simulations",
+      "source": "UK AI Security Institute",
+      "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
+      "models": [
+        "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "article",
+      "title": "Carbonato botnet compromises Docker hosts to deploy Telegram-controlled Hermes AI agent",
+      "source": "The Hacker News",
+      "url": "https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html",
+      "models": []
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "article",
+      "title": "Nvidia unveils AI agent safety platform with hardware-based watchdog",
+      "source": "SecurityWeek",
+      "url": "https://www.securityweek.com/nvidia-unveils-ai-agent-safety-platform-with-hardware-based-watchdog/",
+      "models": []
+    },
+    {
+      "date": "2026-09-28",
       "kind": "social",
       "title": "Opus 5.5 vs. GPT-6 in pi-agent: reasoning efforts and DeepSeek, GLM, Qwen",
       "source": "Hacker News",
@@ -34,6 +60,54 @@
     },
     {
       "date": "2026-09-26",
+      "kind": "article",
+      "title": "Another OpenAI sandbox failed: AI agent gained internet access",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-26/another-openai-sandbox-failed-ai-agent-gained-internet-access",
+      "models": []
+    },
+    {
+      "date": "2026-09-26",
+      "kind": "article",
+      "title": "OpenAI halts training and inference on most capable models after second sandbox escape",
+      "source": "Fortune",
+      "url": "https://fortune.com/2026/09/26/openai-ai-agents-secure-sandbox-escape-training-pause-second-time-hugging-face-hack/",
+      "models": []
+    },
+    {
+      "date": "2026-09-26",
+      "kind": "blog",
+      "title": "An OpenAI agent escaped its sandbox by hiding questions in DNS lookups",
+      "source": "madrobot.blog (via Hacker News)",
+      "url": "https://madrobot.blog/2026/09/26/openai-agent-escaped-sandbox-dns-external-chatbot-models-paused/",
+      "models": []
+    },
+    {
+      "date": "2026-09-26",
+      "kind": "article",
+      "title": "One company is at the center of a wave of rogue AI attacks (Irregular's eval sandboxes)",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google",
+      "models": []
+    },
+    {
+      "date": "2026-09-26",
+      "kind": "article",
+      "title": "US and China agree to establish an AI incident communication channel",
+      "source": "SecurityWeek",
+      "url": "https://www.securityweek.com/china-and-us-agree-to-establish-ai-safety-channel-and-continue-trade-and-military-talks/",
+      "models": []
+    },
+    {
+      "date": "2026-09-26",
+      "kind": "article",
+      "title": "Hackers hijack AI accounts and servers to fuel new cyber crime boom",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/3f406fbe-b72e-488f-9975-5b94e95dfe32",
+      "models": []
+    },
+    {
+      "date": "2026-09-26",
       "kind": "social",
       "title": "GPT-6 Astra won't try hard unless you ask",
       "source": "Hacker News",
@@ -50,6 +124,25 @@
       "url": "https://huggingface.co/5yencat/GLM-5.3-Flash-CYBER-oQ4e-mtp",
       "models": [
         "glm-5-3"
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "kind": "article",
+      "title": "AI sandbox escapes: why forensic readiness matters more than containment",
+      "source": "Dark Reading",
+      "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-sandbox-escapes-forensic-readiness",
+      "models": []
+    },
+    {
+      "date": "2026-09-23",
+      "kind": "blog",
+      "title": "Claude Opus 5.5: the system card — Opus 5.5 leads Mythos 5.1 on all cyber evals",
+      "source": "Zvi Mowshowitz",
+      "url": "https://thezvi.wordpress.com/2026/09/23/claude-opus-5-5-the-system-card/",
+      "models": [
+        "claude-opus-5-5",
+        "claude-mythos-5-1"
       ]
     },
     {
@@ -70,6 +163,24 @@
       "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
       "models": [
         "claude-opus-5-5"
+      ]
+    },
+    {
+      "date": "2026-09-21",
+      "kind": "article",
+      "title": "Google Gemini escaped test environments and hacked three real companies",
+      "source": "Cybersecurity Dive",
+      "url": "https://www.cybersecuritydive.com/news/google-ai-gemini-autonomous-hacks/830884/",
+      "models": []
+    },
+    {
+      "date": "2026-09-21",
+      "kind": "official",
+      "title": "xAI Grok 4.7 model card: HackerBench v0.3 risky-prompt pass-through 3.3%, CathedralBench red-team protocol",
+      "source": "xAI",
+      "url": "https://media.x.ai/v1/website/4p7card-5eccc980.pdf",
+      "models": [
+        "grok-4-7"
       ]
     },
     {
@@ -215,5 +326,5 @@
       ]
     }
   ],
-  "updated": "2026-09-28T16:00+00:00"
+  "updated": "2026-09-28T16:13+00:00"
 }
