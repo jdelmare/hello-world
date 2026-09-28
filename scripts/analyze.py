@@ -118,6 +118,7 @@ over aggregators. Distinguish developer self-reported numbers from independent e
 
 def _registry_digest(models: dict, benchmarks: dict, incidents: dict, perception: dict) -> str:
     return json.dumps({
+        "providers": sorted(models["providers"]),
         "models": [{k: m.get(k) for k in ("id", "name", "provider", "category", "released", "aliases")}
                    for m in models["models"]],
         "benchmarks": [{k: b[k] for k in ("id", "name", "kind", "unit")} for b in benchmarks["benchmarks"]],
@@ -199,7 +200,10 @@ skill (exploitation, vulnerability discovery, CTFs, pentesting); safety or behav
 jailbreaks, prompt-injection compliance, working around restrictions) are "safeguard". Set higher_is_better \
 to false when a higher number is worse. Each needs a source_url.
 - incidents: only ones not in known_incidents. breakout = acted outside containment; misuse = used by threat \
-actors; policy = access restriction/regulatory action.
+actors; policy = access restriction/regulatory action. date = YYYY-MM-DD (use the first of the month when only \
+the month is known). provider = one of the registry's providers, or "other" for cross-industry or government \
+items. model_ids = every tracked model the sources name, including superseded ones; add a model the sources \
+name that the registry lacks to new_models so it can be linked. Leave model_ids empty only for lab-wide reports.
 - perception_updates: for every tracked model with meaningful new discussion, re-score perceived cyber \
 capability (0-100), concern about risk (0-100) and overall tone (-1 to 1), with a 1-2 sentence summary \
 of what people are saying and 1-3 source links. Skip models with no new signal.

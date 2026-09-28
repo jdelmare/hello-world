@@ -92,7 +92,11 @@
     for (const sc of D.benchmarks.scores) (D.scoresBy[sc.model] ||= []).push(sc);
     D.benchById = Object.fromEntries(D.benchmarks.benchmarks.map((b) => [b.id, b]));
     D.incBy = {};
-    for (const inc of D.incidents.incidents) for (const m of inc.models || []) (D.incBy[m] ||= []).push(inc);
+    D.incByProv = {};
+    for (const inc of D.incidents.incidents) {
+      for (const m of inc.models || []) (D.incBy[m] ||= []).push(inc);
+      (D.incByProv[inc.provider] ||= []).push(inc);
+    }
   }
 
   function series(id, key) {
@@ -198,9 +202,14 @@
     { key: "concern", label: "Concern", get: (m) => perc(m).concern ?? -1 },
     { key: "trend", label: "Perceived, trend", get: (m) => delta(m.id, "capability") ?? 0, opt: true },
     { key: "buzz", label: "Buzz", get: (m) => perc(m).buzz ?? -1, opt: true },
-    { key: "incidents", label: "Incidents", get: (m) => (D.incBy[m.id] || []).length },
+    { key: "incidents", label: "Incidents", get: (m) => (D.incBy[m.id] || []).length * 1000 + labIncs(m).length },
   ];
   const perc = (m) => D.perception.models[m.id] || {};
+  // Incidents at the model's lab that are not tied to this model: lab-wide reports and incidents
+  // involving the lab's other (often superseded) models. Together with the model's own incidents
+  // these add up to that provider's rows in the Breakouts & misuse list.
+  const labIncs = (m) => (D.incByProv[m.provider] || []).filter((i) => !(i.models || []).includes(m.id));
+  const worstSev = (incs) => incs.map((i) => i.severity).sort((a, b) => Object.keys(SEV).indexOf(a) - Object.keys(SEV).indexOf(b))[0];
 
   function renderBoard() {
     const ms = D.models.models.filter((m) => inScope(m));
@@ -218,9 +227,8 @@
     const tbody = h("tbody");
     if (!ms.length) tbody.append(h("tr", {}, h("td", { colspan: COLS.length, class: "muted", text: "No models match these filters." })));
     for (const m of ms) {
-      const p = perc(m), incs = D.incBy[m.id] || [];
+      const p = perc(m), incs = D.incBy[m.id] || [], lab = labIncs(m);
       const cat = CATS[m.category];
-      const worst = incs.map((i) => i.severity).sort((a, b) => Object.keys(SEV).indexOf(a) - Object.keys(SEV).indexOf(b))[0];
       const n = m.index ? m.index.n : 0;
       const open = state.open.has(m.id);
       const tr = h("tr", { class: "row", tabindex: "0", "aria-expanded": String(open),
@@ -235,8 +243,11 @@
       h("td", {}, p.concern == null ? h("span", { class: "muted", text: "—" }) : h("span", {}, h("span", { class: "num", text: String(p.concern) }), " ", deltaEl(delta(m.id, "concern"), true))),
       h("td", { class: "opt" }, sparkline(m.id, "capability")),
       h("td", { class: "opt num", text: p.buzz == null ? "—" : String(p.buzz) }),
-      h("td", {}, incs.length ? h("span", { class: "inc-flag", title: `${incs.length} incident(s), worst: ${worst}` },
-        statusIcon(worst), String(incs.length)) : h("span", { class: "muted", text: "—" })),
+      h("td", { class: "inc-cell" },
+        incs.length ? h("span", { class: "inc-flag", title: `${incs.length} incident(s) involving this model, worst: ${worstSev(incs)}` },
+          statusIcon(worstSev(incs)), String(incs.length)) : h("span", { class: "muted", text: "—" }),
+        lab.length ? h("div", { class: "inc-lab", title: `${lab.length} other incident(s) at ${provName(m.provider)}: lab-wide reports or other models` },
+          `+${lab.length} at lab`) : null),
       );
       tbody.append(tr);
       if (open) tbody.append(detailRow(m));
@@ -276,17 +287,24 @@
           h("span", { class: "muted", text: ` · ${sc.self_reported ? "self-reported" : "independent/third-party"}${sc.note ? " · " + sc.note : ""} · ` }),
           link("source", sc.source), sc.auto ? h("span", { class: "auto", text: "auto" }) : null);
       })) : h("p", { class: "muted", style: "margin:0", text: "No public cyber benchmark scores tracked yet." }),
-      (D.incBy[m.id] || []).length ? h("div", {}, h("h4", { style: "margin-top:12px", text: "Incidents" }),
-        h("ul", {}, D.incBy[m.id].map((i) => h("li", {}, `${fmtDate(i.date)} — `, link(i.title, (i.sources[0] || {}).url))))) : null,
+      incList("Incidents involving this model", D.incBy[m.id] || []),
+      incList(`Other ${provName(m.provider)} incidents`, labIncs(m)),
     );
     return h("tr", { class: "detail" }, h("td", { colspan: COLS.length }, h("div", { class: "detail-grid" }, left, right)));
+  }
+
+  function incList(title, incs) {
+    if (!incs.length) return null;
+    return h("div", {}, h("h4", { style: "margin-top:12px", text: title }),
+      h("ul", {}, incs.map((i) => h("li", {}, statusIcon(i.severity), ` ${fmtDate(i.date)} — `, link(i.title, (i.sources[0] || {}).url),
+        (i.models || []).length ? h("span", { class: "muted", text: ` (${i.models.map((id) => (model(id) || { name: id }).name).join(", ")})` }) : null))));
   }
 
   // ---------- frontier scatter ----------
   function renderFrontier() {
     const el = $("frontier");
     const pts = D.models.models.filter((m) => inScope(m, { ignoreOld: true }) && m.released && m.index);
-    const W = Math.max(300, el.clientWidth), H = 300, M = { l: 34, r: 16, t: 12, b: 26 };
+    const W = Math.max(300, el.clientWidth), H = W < 560 ? 440 : 340, M = { l: 34, r: 16, t: 12, b: 26 };
     const svg = s("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Benchmark index by release date" });
     if (!pts.length) {
       svg.append(s("text", { x: W / 2, y: H / 2, "text-anchor": "middle", class: "empty" }, "No dated, benchmarked models match these filters."));
@@ -307,16 +325,10 @@
     for (; +d <= x1; d.setUTCMonth(d.getUTCMonth() + stepM)) {
       svg.append(s("text", { x: X(+d), y: H - 8, "text-anchor": "middle" }, d.toLocaleDateString(undefined, { month: "short", year: "2-digit", timeZone: "UTC" })));
     }
-    // Selective labels: best per category plus the newest overall.
-    const labeled = new Set();
-    for (const c of Object.keys(CATS)) {
-      const best = pts.filter((m) => m.category === c).sort((a, b) => b.index.index - a.index.index)[0];
-      if (best) labeled.add(best.id);
-    }
-    labeled.add(pts.slice().sort((a, b) => b.released.localeCompare(a.released))[0].id);
     const order = pts.slice().sort((a, b) => a.index.index - b.index.index);
+    const pos = (m) => ({ x: X(+parseDate(m.released)), y: Y(m.index.index) });
     for (const m of order) {
-      const cx = X(+parseDate(m.released)), cy = Y(m.index.index);
+      const { x: cx, y: cy } = pos(m);
       const g = s("g", { "aria-label": `${m.name}: index ${m.index.index}` });
       g.append(s("circle", { cx, cy, r: 6, fill: CATS[m.category].color, stroke: "var(--surface)", "stroke-width": 2, class: "mark" }));
       const hit = s("circle", { cx, cy, r: 13, class: "hit" });
@@ -324,16 +336,44 @@
       bindTip(hit, [["tv", `Index ${m.index.index}`], ["tl", m.name], ["tm", `${CATS[m.category].label} · ${fmtDate(m.released)} · ${m.index.n} benchmark(s)`]]);
       svg.append(g);
     }
-    const placed = [];
-    for (const m of order.filter((m) => labeled.has(m.id)).reverse()) {
-      const cx = X(+parseDate(m.released)), cy = Y(m.index.index);
-      const right = cx < W - 130;
-      let ly = cy + 4;
-      while (placed.some((p) => Math.abs(p.y - ly) < 13 && Math.abs(p.x - cx) < 140)) ly += 13;
-      placed.push({ x: cx, y: ly });
-      svg.append(s("text", { x: right ? cx + 10 : cx - 10, y: ly, "text-anchor": right ? "start" : "end", class: "lbl" }, m.name));
-    }
-    el.replaceChildren(svg);
+    // Label every point. Highest first, each label scores the spots around its dot (beside it,
+    // then stepped further up or down, or centred above/below) and takes the one that collides
+    // least with labels already placed and with dots, preferring spots close to the dot. A label
+    // that had to move gets a leader line back to its dot.
+    el.replaceChildren(svg); // attached so label widths can be measured
+    const dots = order.map(pos);
+    const boxes = [];
+    const LH = 13, GAP = 9;
+    const overlap = (a, b) => Math.max(0, Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x)) *
+      Math.max(0, Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y));
+    const cost = (b, self) => {
+      let c = 0;
+      for (const o of boxes) c += overlap(b, { x: o.x - 3, y: o.y - 1, w: o.w + 6, h: o.h + 2 }) * 10;
+      for (const d of dots) if (d !== self) c += overlap(b, { x: d.x - 8, y: d.y - 8, w: 16, h: 16 }) * 10;
+      return c + Math.hypot(b.x + b.w / 2 - self.x, b.y + b.h / 2 - self.y) * 0.3;
+    };
+    const inside = (b) => b.x >= M.l + 2 && b.x + b.w <= W - 2 && b.y >= 0 && b.y + b.h <= H - M.b - 2;
+    order.slice().reverse().forEach((m) => {
+      const self = dots[order.indexOf(m)], { x: cx, y: cy } = self;
+      const t = s("text", { class: "lbl" }, m.name);
+      svg.append(t);
+      const w = t.getComputedTextLength();
+      const cands = [];
+      for (let k = 0; k <= 7; k++) for (const dy of k ? [-k * LH, k * LH] : [0]) {
+        cands.push({ x: cx + GAP, y: cy - LH / 2 + dy, w, h: LH, moved: k > 0 });
+        cands.push({ x: cx - GAP - w, y: cy - LH / 2 + dy, w, h: LH, moved: k > 0 });
+      }
+      cands.push({ x: cx - w / 2, y: cy - 8 - LH, w, h: LH, moved: false }, { x: cx - w / 2, y: cy + 8, w, h: LH, moved: false });
+      const ok = cands.filter(inside);
+      const best = (ok.length ? ok : cands).reduce((a, b) => (cost(b, self) < cost(a, self) ? b : a));
+      boxes.push(best);
+      t.setAttribute("x", best.x);
+      t.setAttribute("y", best.y + LH - 3);
+      if (best.moved) {
+        const lx = best.x > cx ? best.x - 2 : best.x + best.w + 2;
+        svg.insertBefore(s("line", { x1: cx, y1: cy, x2: lx, y2: best.y + LH / 2, stroke: "var(--axis)", "stroke-width": 1 }), svg.firstChild.nextSibling);
+      }
+    });
     $("frontier-legend").replaceChildren(...catLegend(pts, true));
   }
   function catLegend(items, dot) {
@@ -445,7 +485,7 @@
           i.auto ? h("span", { class: "auto", text: "auto" }) : null),
         h("p", { class: "inc-sum", text: i.summary }),
         h("p", { class: "inc-src" },
-          [provName(i.provider), names.length ? names.join(", ") : null].filter(Boolean).join(" · ") + " · ",
+          [provName(i.provider), names.length ? names.join(", ") : "lab-wide"].join(" · ") + " · ",
           ...(i.sources || []).flatMap((x, k) => [k ? ", " : "", link(x.title, x.url)])));
     }) : [h("li", { class: "muted", text: "No incidents for this provider." })]));
   }
