@@ -74,44 +74,22 @@
       "url": ""
     },
     {
-      "id": "exploitgym_2h",
-      "name": "ExploitGym (2h budget)",
-      "kind": "capability",
-      "unit": "%",
-      "higher_is_better": true,
-      "description": "Added automatically — review.",
-      "url": "",
-      "auto_added": "2026-09-28"
-    },
-    {
-      "id": "exploitgym_6h",
-      "name": "ExploitGym (6h budget)",
-      "kind": "capability",
-      "unit": "%",
-      "higher_is_better": true,
-      "description": "Added automatically — review.",
-      "url": "",
-      "auto_added": "2026-09-28"
-    },
-    {
       "id": "access_denied_workaround",
-      "name": "Access-denied workaround rate (agentic safety)",
-      "kind": "capability",
-      "unit": "%",
-      "higher_is_better": true,
-      "description": "Added automatically — review.",
-      "url": "",
-      "auto_added": "2026-09-28"
+      "name": "Access-denied workaround rate",
+      "kind": "safeguard",
+      "unit": "% of runs",
+      "higher_is_better": false,
+      "description": "Share of agentic runs where the model circumvented an explicit 'access denied' restriction (lower is safer).",
+      "url": "https://thenewstack.io/openai-gpt-6-sol-luna-release/"
     },
     {
       "id": "prompt_injection_action",
-      "name": "Injected-instruction compliance (seeded message board)",
-      "kind": "capability",
-      "unit": "%",
-      "higher_is_better": true,
-      "description": "Added automatically — review.",
-      "url": "",
-      "auto_added": "2026-09-28"
+      "name": "Prompt-injection compliance",
+      "kind": "safeguard",
+      "unit": "% of runs",
+      "higher_is_better": false,
+      "description": "Share of runs where the model acted on instructions injected via a seeded message board (lower is safer).",
+      "url": "https://thenewstack.io/openai-gpt-6-sol-luna-release/"
     }
   ],
   "scores": [
@@ -320,44 +298,13 @@
       "auto": true
     },
     {
-      "model": "claude-opus-5-5",
-      "benchmark": "exploitgym_2h",
-      "value": 33.3,
-      "date": "2026-09-22",
-      "self_reported": true,
-      "note": "289/869 cases, safeguards disabled. Distinct from the registry's 34.5%, which corresponds to the 6h budget (300/869).",
-      "source": "https://app.stationx.net/articles/claude-opus-5-5-review",
-      "auto": true
-    },
-    {
       "model": "claude-mythos-5-1",
-      "benchmark": "exploitgym_2h",
-      "value": 23.4,
-      "date": "2026-09-22",
-      "self_reported": true,
-      "note": "203/869 cases, comparator in the Opus 5.5 card, safeguards disabled.",
-      "source": "https://app.stationx.net/articles/claude-opus-5-5-review",
-      "auto": true
-    },
-    {
-      "model": "claude-opus-5-5",
-      "benchmark": "exploitgym_6h",
-      "value": 34.5,
-      "date": "2026-09-22",
-      "self_reported": true,
-      "note": "300/869 cases, safeguards disabled. Extending the budget from 2h to 6h moved the score by only ~1.2pp for Opus 5.5 but ~7pp for Mythos 5.1.",
-      "source": "https://app.stationx.net/articles/claude-opus-5-5-review",
-      "auto": true
-    },
-    {
-      "model": "claude-mythos-5-1",
-      "benchmark": "exploitgym_6h",
+      "benchmark": "exploitgym",
       "value": 30.4,
       "date": "2026-09-22",
       "self_reported": true,
       "note": "264/869 cases, comparator in the Opus 5.5 card, safeguards disabled.",
-      "source": "https://app.stationx.net/articles/claude-opus-5-5-review",
-      "auto": true
+      "source": "https://app.stationx.net/articles/claude-opus-5-5-review"
     },
     {
       "model": "mimo-v2-6-pro",

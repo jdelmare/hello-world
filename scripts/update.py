@@ -87,8 +87,9 @@ def merge(upd, today: str, models: dict, benchmarks: dict, incidents: dict,
         bid = slug(br.benchmark_id).replace("-", "_")
         if bid not in bench_ids:
             benchmarks["benchmarks"].append({
-                "id": bid, "name": br.benchmark_name, "kind": "capability", "unit": "%",
-                "higher_is_better": True, "description": "Added automatically — review.", "url": "",
+                "id": bid, "name": br.benchmark_name, "kind": br.benchmark_kind, "unit": "%",
+                "higher_is_better": br.higher_is_better,
+                "description": "Added automatically; not counted in the index until reviewed.", "url": "",
                 "auto_added": today,
             })
             bench_ids.add(bid)

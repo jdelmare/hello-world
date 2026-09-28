@@ -48,6 +48,8 @@ class BenchmarkResult(BaseModel):
     model_id: str
     benchmark_id: str
     benchmark_name: str
+    benchmark_kind: Literal["capability", "safeguard"]
+    higher_is_better: bool
     value: float
     date: str
     self_reported: bool
@@ -190,7 +192,12 @@ Produce today's dashboard update:
 id = lowercase slug (e.g. "gpt-6-1"). category: ga | gated (trusted-access/cyber-specific) | open (open weights). \
 released = YYYY-MM-DD or null.
 - benchmark_results: only numbers not already in known_scores, as percentages 0-100. Reuse an existing \
-benchmark_id when it matches; otherwise make a new slug id. Each needs a source_url.
+benchmark_id when it matches, including variants of the same benchmark (a different time budget, harness or \
+subset goes under the base id, with the variant described in note; prefer the headline configuration). \
+Otherwise make a new slug id. benchmark_kind is "capability" only for measures of offensive or defensive cyber \
+skill (exploitation, vulnerability discovery, CTFs, pentesting); safety or behavior measures (refusals, \
+jailbreaks, prompt-injection compliance, working around restrictions) are "safeguard". Set higher_is_better \
+to false when a higher number is worse. Each needs a source_url.
 - incidents: only ones not in known_incidents. breakout = acted outside containment; misuse = used by threat \
 actors; policy = access restriction/regulatory action.
 - perception_updates: for every tracked model with meaningful new discussion, re-score perceived cyber \
