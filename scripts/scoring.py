@@ -4,7 +4,9 @@ For each capability benchmark, a model's score is normalized to the best
 tracked score on that benchmark (best = 100). The index is the mean of those
 normalized scores, shrunk toward a neutral prior of 50 with weight PRIOR_WEIGHT,
 so a model with a single benchmark cannot outrank one with broad coverage on
-thin evidence. Self-reported numbers count at SELF_REPORTED_WEIGHT.
+thin evidence. Self-reported numbers count at SELF_REPORTED_WEIGHT. Benchmarks the
+daily pipeline added (auto_added) are excluded until a person reviews them, so an
+unvetted metric can't move the rankings.
 """
 
 PRIOR = 50.0
@@ -13,7 +15,8 @@ SELF_REPORTED_WEIGHT = 0.8
 
 
 def compute_index(benchmarks: dict) -> dict:
-    caps = {b["id"]: b for b in benchmarks["benchmarks"] if b["kind"] == "capability"}
+    caps = {b["id"]: b for b in benchmarks["benchmarks"]
+            if b["kind"] == "capability" and not b.get("auto_added")}
     best: dict[str, float] = {}
     for s in benchmarks["scores"]:
         b = caps.get(s["benchmark"])
