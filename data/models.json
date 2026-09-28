@@ -40,6 +40,138 @@
   },
   "models": [
     {
+      "id": "gpt-5-6-cyber",
+      "name": "GPT-5.6 Cyber",
+      "provider": "openai",
+      "category": "gated",
+      "status": "active",
+      "released": null,
+      "access": "Trusted-access cyber-specific model; reported as the immediate predecessor to GPT-6 Cyber in the Daybreak Red tier.",
+      "aliases": [
+        "GPT-5.6 Cyber"
+      ],
+      "notes": "Identified only via Fortune's count of OpenAI's 2026 cyber models (\"GPT-5.6 Cyber, August\"). Same Fortune piece dates GPT-5.5 Cyber to June, conflicting with the registry's 2026-05-07 — both dates need a primary OpenAI source before editing.",
+      "sources": [
+        {
+          "title": "OpenAI launching GPT-6 Cyber model and security product at DevDay (Fortune, 2026-09-24)",
+          "url": "https://fortune.com/2026/09/24/openai-launching-gpt-6-cyber-model-and-security-product-devday/"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": null
+    },
+    {
+      "id": "gpt-5-4-cyber",
+      "name": "GPT-5.4 Cyber",
+      "provider": "openai",
+      "category": "gated",
+      "status": "active",
+      "released": null,
+      "access": "Trusted-access cyber-specific model; Daybreak-tier gating assumed but not confirmed for this vintage.",
+      "aliases": [
+        "GPT-5.4 Cyber"
+      ],
+      "notes": "Identified only via Fortune's count of OpenAI's 2026 cyber models (\"GPT-5.4 Cyber, April\"). Exact release date and eval results unverified against a primary OpenAI source — listed for completeness, treat date as approximate (April 2026).",
+      "sources": [
+        {
+          "title": "OpenAI launching GPT-6 Cyber model and security product at DevDay (Fortune, 2026-09-24)",
+          "url": "https://fortune.com/2026/09/24/openai-launching-gpt-6-cyber-model-and-security-product-devday/"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": null
+    },
+    {
+      "id": "gpt-6-cyber",
+      "name": "GPT-6 Cyber",
+      "provider": "openai",
+      "category": "gated",
+      "status": "active",
+      "released": null,
+      "access": "Preview announced for DevDay 2026-09-29. Gated behind Daybreak Red: application-only, identity verification, legal attestation, and since 2026-09-01 a hardware security key per individual account. Some Daybreak Red customers reported alpha-testing already.",
+      "aliases": [
+        "GPT-6 Cyber"
+      ],
+      "notes": "Reported by Fortune as OpenAI's fourth cyber-specific model of 2026. A separate unnamed deployment gateway product (automated patching workflows, usage monitoring) is reported alongside it. No capability numbers published; all sourcing is secondary pending OpenAI's own release material.",
+      "sources": [
+        {
+          "title": "OpenAI launching GPT-6 Cyber model and security product at DevDay (Fortune, 2026-09-24)",
+          "url": "https://fortune.com/2026/09/24/openai-launching-gpt-6-cyber-model-and-security-product-devday/"
+        },
+        {
+          "title": "Gated access to dangerous capabilities: Daybreak Red/Blue (Forkast, 2026-09-25)",
+          "url": "https://forkast.news/openais-fourth-cybersecurity-model-in-twelve-months-is-not-about-better-chatbots-it-is-about-gated-access-to-dangerous-capabilities/"
+        },
+        {
+          "title": "OpenAI builds security gateway to deploy GPT-6 Cyber (PYMNTS, 2026-09-26)",
+          "url": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-builds-new-security-gateway-to-deploy-gpt-6-cyber/"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": null
+    },
+    {
+      "id": "gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "provider": "openai",
+      "category": "ga",
+      "status": "active",
+      "released": "2026-09-22",
+      "access": "General availability; positioned as the low-cost tier of the GPT-6 line.",
+      "aliases": [
+        "GPT-6 Luna",
+        "Luna"
+      ],
+      "notes": "Also shipped without a system card or Preparedness rating per secondary analysis. OpenAI-reported agentic-safety figures are materially better than Sol's (access-denied workaround 42.4%, zero prompt-injection compliance, though OpenAI notes Luna found the seeded board less often). No independent cyber evaluation.",
+      "sources": [
+        {
+          "title": "OpenAI GPT-6 Sol and Luna release (The New Stack, 2026-09-22)",
+          "url": "https://thenewstack.io/openai-gpt-6-sol-luna-release/"
+        },
+        {
+          "title": "Model drop: GPT-6 Sol and GPT-6 Luna (handyai, 2026-09-22)",
+          "url": "https://handyai.substack.com/p/model-drop-gpt-6-sol-and-gpt-6-luna"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": {
+        "index": 41.2,
+        "n": 2
+      }
+    },
+    {
+      "id": "gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "provider": "openai",
+      "category": "ga",
+      "status": "active",
+      "released": "2026-09-22",
+      "access": "General availability via API and ChatGPT; ~50% token price cut reported at launch.",
+      "aliases": [
+        "GPT-6 Sol"
+      ],
+      "notes": "Shipped without a published system card or Preparedness rating per secondary analysis — flag as 'no safety documentation'. Only cyber-adjacent figures available are OpenAI-reported agentic-safety numbers (access-denied workaround 64.4%, prompt-injection compliance 11.3%). Not independently evaluated. Distinct from the registry's GPT-5.6 Sol.",
+      "sources": [
+        {
+          "title": "OpenAI GPT-6 Sol and Luna release (The New Stack, 2026-09-22)",
+          "url": "https://thenewstack.io/openai-gpt-6-sol-luna-release/"
+        },
+        {
+          "title": "Model drop: GPT-6 Sol and GPT-6 Luna (handyai, 2026-09-22)",
+          "url": "https://handyai.substack.com/p/model-drop-gpt-6-sol-and-gpt-6-luna"
+        },
+        {
+          "title": "LLM release timeline",
+          "url": "https://llmgateway.io/timeline"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": {
+        "index": 75.8,
+        "n": 2
+      }
+    },
+    {
       "id": "fugu-cyber",
       "name": "Fugu-Cyber",
       "provider": "sakana",
@@ -108,7 +240,10 @@
         }
       ],
       "auto_added": "2026-09-28",
-      "index": null
+      "index": {
+        "index": 67.0,
+        "n": 1
+      }
     },
     {
       "id": "claude-mythos-5-1",
@@ -129,8 +264,8 @@
         }
       ],
       "index": {
-        "index": 64.4,
-        "n": 1
+        "index": 70.4,
+        "n": 3
       }
     },
     {
@@ -172,8 +307,8 @@
         }
       ],
       "index": {
-        "index": 71.5,
-        "n": 3
+        "index": 79.8,
+        "n": 5
       }
     },
     {
@@ -195,8 +330,8 @@
         }
       ],
       "index": {
-        "index": 58.0,
-        "n": 1
+        "index": 62.9,
+        "n": 2
       }
     },
     {
@@ -306,8 +441,8 @@
         }
       ],
       "index": {
-        "index": 75.8,
-        "n": 2
+        "index": 60.3,
+        "n": 3
       }
     },
     {
@@ -642,5 +777,5 @@
       }
     }
   ],
-  "updated": "2026-09-28T16:13+00:00"
+  "updated": "2026-09-28T16:36+00:00"
 }

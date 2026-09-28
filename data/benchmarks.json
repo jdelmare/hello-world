@@ -72,6 +72,46 @@
       "higher_is_better": false,
       "description": "Share of risky dual-use cyber prompts the model complies with (lower is safer).",
       "url": ""
+    },
+    {
+      "id": "exploitgym_2h",
+      "name": "ExploitGym (2h budget)",
+      "kind": "capability",
+      "unit": "%",
+      "higher_is_better": true,
+      "description": "Added automatically — review.",
+      "url": "",
+      "auto_added": "2026-09-28"
+    },
+    {
+      "id": "exploitgym_6h",
+      "name": "ExploitGym (6h budget)",
+      "kind": "capability",
+      "unit": "%",
+      "higher_is_better": true,
+      "description": "Added automatically — review.",
+      "url": "",
+      "auto_added": "2026-09-28"
+    },
+    {
+      "id": "access_denied_workaround",
+      "name": "Access-denied workaround rate (agentic safety)",
+      "kind": "capability",
+      "unit": "%",
+      "higher_is_better": true,
+      "description": "Added automatically — review.",
+      "url": "",
+      "auto_added": "2026-09-28"
+    },
+    {
+      "id": "prompt_injection_action",
+      "name": "Injected-instruction compliance (seeded message board)",
+      "kind": "capability",
+      "unit": "%",
+      "higher_is_better": true,
+      "description": "Added automatically — review.",
+      "url": "",
+      "auto_added": "2026-09-28"
     }
   ],
   "scores": [
@@ -268,6 +308,116 @@
       "self_reported": true,
       "note": "HackerBench v0.3",
       "source": "https://releasebot.io/updates/xai"
+    },
+    {
+      "model": "claude-opus-5",
+      "benchmark": "cyscenariobench",
+      "value": 53.0,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "Comparator figure from the Claude Opus 5.5 system card; run with safeguards disabled. Developer-reported, no independent replication.",
+      "source": "https://thezvi.wordpress.com/2026/09/23/claude-opus-5-5-the-system-card/",
+      "auto": true
+    },
+    {
+      "model": "claude-opus-5-5",
+      "benchmark": "exploitgym_2h",
+      "value": 33.3,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "289/869 cases, safeguards disabled. Distinct from the registry's 34.5%, which corresponds to the 6h budget (300/869).",
+      "source": "https://app.stationx.net/articles/claude-opus-5-5-review",
+      "auto": true
+    },
+    {
+      "model": "claude-mythos-5-1",
+      "benchmark": "exploitgym_2h",
+      "value": 23.4,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "203/869 cases, comparator in the Opus 5.5 card, safeguards disabled.",
+      "source": "https://app.stationx.net/articles/claude-opus-5-5-review",
+      "auto": true
+    },
+    {
+      "model": "claude-opus-5-5",
+      "benchmark": "exploitgym_6h",
+      "value": 34.5,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "300/869 cases, safeguards disabled. Extending the budget from 2h to 6h moved the score by only ~1.2pp for Opus 5.5 but ~7pp for Mythos 5.1.",
+      "source": "https://app.stationx.net/articles/claude-opus-5-5-review",
+      "auto": true
+    },
+    {
+      "model": "claude-mythos-5-1",
+      "benchmark": "exploitgym_6h",
+      "value": 30.4,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "264/869 cases, comparator in the Opus 5.5 card, safeguards disabled.",
+      "source": "https://app.stationx.net/articles/claude-opus-5-5-review",
+      "auto": true
+    },
+    {
+      "model": "mimo-v2-6-pro",
+      "benchmark": "cybergym",
+      "value": 94.0,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "Vendor-reported internal figure, no independent evaluation. CONFLICT: the registry already carries MiMo-V2.6-Flash at 95.1, i.e. the smaller model above the flagship — one attribution is likely wrong. Also note Anthropic has retired CyberGym from its system card citing saturation, so cross-vendor comparisons on this board are decaying in value.",
+      "source": "https://forkast.news/xiaomis-mimo-v2-6-ships-open-weights-at-frontier-class-performance-and-the-timing-is-not-an-accident/",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-sol",
+      "benchmark": "access_denied_workaround",
+      "value": 64.4,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "Share of runs in which the model circumvented an explicit 'access denied' restriction; higher is worse. OpenAI-reported, low-stakes tests without full product safeguards, and published without a system card — treat as marketing-adjacent disclosure.",
+      "source": "https://thenewstack.io/openai-gpt-6-sol-luna-release/",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-luna",
+      "benchmark": "access_denied_workaround",
+      "value": 42.4,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "Share of runs circumventing an explicit 'access denied' restriction; higher is worse. OpenAI reports this down from 76.5% for the predecessor model. Self-reported, no system card.",
+      "source": "https://thenewstack.io/openai-gpt-6-sol-luna-release/",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-sol",
+      "benchmark": "prompt_injection_action",
+      "value": 11.3,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "Share of runs in which the model took the injected action after finding the seeded board; higher is worse. OpenAI reports 51.9% for the predecessor. Self-reported, no system card.",
+      "source": "https://thenewstack.io/openai-gpt-6-sol-luna-release/",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-luna",
+      "benchmark": "prompt_injection_action",
+      "value": 0.0,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "No injected actions taken, but OpenAI notes Luna located the seeded board less often, so the rate is not directly comparable to Sol's.",
+      "source": "https://thenewstack.io/openai-gpt-6-sol-luna-release/",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-astra",
+      "benchmark": "prompt_injection_action",
+      "value": 0.0,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "Reported as comparator alongside GPT-6 Sol/Luna; no injected actions taken. Self-reported, low-stakes test setup.",
+      "source": "https://thenewstack.io/openai-gpt-6-sol-luna-release/",
+      "auto": true
     }
   ]
 }

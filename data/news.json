@@ -3,6 +3,22 @@
   "items": [
     {
       "date": "2026-09-28",
+      "kind": "article",
+      "title": "'Drunk' AI is terrible at keeping secrets — style fine-tuning degrades jailbreak resistance",
+      "source": "Help Net Security",
+      "url": "https://www.helpnetsecurity.com/2026/09/28/drunk-ai-models-jailbreak-research/",
+      "models": []
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "article",
+      "title": "If you do one security check this quarter, make it agent memory",
+      "source": "Help Net Security",
+      "url": "https://www.helpnetsecurity.com/2026/09/28/chris-latimer-vectorize-agent-memory-security/",
+      "models": []
+    },
+    {
+      "date": "2026-09-28",
       "kind": "blog",
       "title": "GPT-6 Astra performs unsanctioned supply-chain attacks in simulations",
       "source": "UK AI Security Institute",
@@ -129,10 +145,33 @@
     {
       "date": "2026-09-25",
       "kind": "article",
+      "title": "Daybreak Red and Blue: OpenAI's gated-access architecture, now with per-account hardware keys",
+      "source": "Forkast",
+      "url": "https://forkast.news/openais-fourth-cybersecurity-model-in-twelve-months-is-not-about-better-chatbots-it-is-about-gated-access-to-dangerous-capabilities/",
+      "models": [
+        "gpt-6-cyber"
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "kind": "article",
       "title": "AI sandbox escapes: why forensic readiness matters more than containment",
       "source": "Dark Reading",
       "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-sandbox-escapes-forensic-readiness",
       "models": []
+    },
+    {
+      "date": "2026-09-24",
+      "kind": "article",
+      "title": "OpenAI to preview GPT-6 Cyber and a security product at DevDay — its fourth cyber-specific model of 2026",
+      "source": "Fortune",
+      "url": "https://fortune.com/2026/09/24/openai-launching-gpt-6-cyber-model-and-security-product-devday/",
+      "models": [
+        "gpt-6-cyber",
+        "gpt-5-4-cyber",
+        "gpt-5-5-cyber",
+        "gpt-5-6-cyber"
+      ]
     },
     {
       "date": "2026-09-23",
@@ -153,6 +192,39 @@
       "url": "https://thezvi.substack.com/p/claude-opus-55-the-system-card",
       "models": [
         "claude-opus-5-5"
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "kind": "blog",
+      "title": "GPT-6 Sol and Luna shipped with no system card and no Preparedness rating",
+      "source": "handyai (Substack)",
+      "url": "https://handyai.substack.com/p/model-drop-gpt-6-sol-and-gpt-6-luna",
+      "models": [
+        "gpt-6-sol",
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "kind": "official",
+      "title": "Anthropic opens a cyber-jailbreak disclosure program for the Fable family (no bounty)",
+      "source": "HackerOne",
+      "url": "https://hackerone.com/anthropic-cyber-jailbreak/",
+      "models": [
+        "claude-fable-5-1",
+        "claude-fable-5"
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "kind": "article",
+      "title": "Xiaomi ships MiMo-V2.6 open weights at frontier-class scores — vendor-reported CyberGym 94.0%",
+      "source": "Forkast",
+      "url": "https://forkast.news/xiaomis-mimo-v2-6-ships-open-weights-at-frontier-class-performance-and-the-timing-is-not-an-accident/",
+      "models": [
+        "mimo-v2-6-pro",
+        "mimo-v2-6-flash"
       ]
     },
     {
@@ -326,5 +398,5 @@
       ]
     }
   ],
-  "updated": "2026-09-28T16:13+00:00"
+  "updated": "2026-09-28T16:36+00:00"
 }

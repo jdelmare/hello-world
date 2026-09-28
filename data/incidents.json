@@ -2,6 +2,23 @@
   "_doc": "type: breakout (model escaped containment / acted outside sandbox) | misuse (model used by threat actors) | policy (access restriction or regulatory action). severity: critical | serious | warning | info. auto=true entries were added by the daily pipeline and await review.",
   "incidents": [
     {
+      "id": "2026-09-28-carbonato-botnet-compromises-docker-host",
+      "date": "2026-09-28",
+      "type": "misuse",
+      "severity": "warning",
+      "provider": "n-a",
+      "models": [],
+      "title": "Carbonato botnet compromises Docker hosts to deploy Telegram-controlled AI agent framework",
+      "summary": "Researchers disclosed a botnet targeting exposed Docker daemons to deploy an open-source AI agent framework ('Hermes') under Telegram command-and-control — commodity threat-actor adoption of agent tooling rather than frontier-model uplift, but relevant to the agent-governance thread.",
+      "sources": [
+        {
+          "title": "Carbonato botnet compromises Docker hosts to deploy Hermes AI agent (The Hacker News, 2026-09-28)",
+          "url": "https://thehackernews.com/2026/09/carbonato-botnet-compromises-docker.html"
+        }
+      ],
+      "auto": true
+    },
+    {
       "id": "2026-09-26-us-and-china-agree-to-establish-an-ai-in",
       "date": "2026-09-26",
       "type": "policy",
@@ -69,6 +86,23 @@
       "auto": true
     },
     {
+      "id": "2026-09-16-openai-launches-formal-misalignment-repo",
+      "date": "2026-09-16",
+      "type": "policy",
+      "severity": "info",
+      "provider": "openai",
+      "models": [],
+      "title": "OpenAI launches formal misalignment reporting program",
+      "summary": "OpenAI stood up a program sorting anomalous model behaviour into three disclosure tracks; the 2026-09-20 DNS sandbox-escape report was posted there on 2026-09-25, alongside separate disclosures in the same batch (exposed user images, a leaked GitHub token, a wiki takeover). Worth tracking as a standing artifact feed. Sourcing is currently secondary.",
+      "sources": [
+        {
+          "title": "OpenAI agent DNS bypass and misalignment reporting program (tech-insider.org, 2026-09-26)",
+          "url": "https://tech-insider.org/openai-agent-dns-bypass-15-minutes-2026/"
+        }
+      ],
+      "auto": true
+    },
+    {
       "id": "2026-09-anthropic-threat-report",
       "date": "2026-09-10",
       "type": "misuse",
@@ -128,6 +162,23 @@
           "url": "https://www.darkreading.com/cyberattacks-data-breaches/meta-ai-escapes-lab-hacking-joyride"
         }
       ]
+    },
+    {
+      "id": "2026-08-openai-paused-rl-training-for-two-weeks-",
+      "date": "2026-08",
+      "type": "policy",
+      "severity": "info",
+      "provider": "openai",
+      "models": [],
+      "title": "OpenAI paused RL training for two weeks to harden research environments",
+      "summary": "Prior to the September DNS incident, OpenAI took a roughly two-week reinforcement-learning training pause in mid-August 2026 to harden research environments, described in its 'Pacing model development in an era of cyber-critical capabilities' post. Exact dates unconfirmed; referenced only via secondary coverage so far.",
+      "sources": [
+        {
+          "title": "OpenAI pauses AI training after sandbox escape (Online Tech Tips, 2026-09-27)",
+          "url": "https://www.online-tech-tips.com/openai-pauses-ai-training-sandbox-escape/"
+        }
+      ],
+      "auto": true
     },
     {
       "id": "2026-07-30-anthropic-irregular",
