@@ -23,6 +23,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # Re-runs check out the run's original commit; start from the branch tip instead so
+      # the data commit can fast-forward.
+      - name: Sync to latest ${{ github.ref_name }}
+        run: |
+          git fetch origin "${{ github.ref_name }}"
+          git checkout -B "${{ github.ref_name }}" "origin/${{ github.ref_name }}"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -43,7 +51,9 @@ jobs:
           git add data
           if git diff --cached --quiet; then echo "No data changes"; exit 0; fi
           git commit -m "data: daily refresh $(date -u +%F)"
-          git push
+          # If something landed on the branch meanwhile, replay this commit on top (keeping ours).
+          git pull --rebase -X theirs origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
 
   deploy:
     needs: update
