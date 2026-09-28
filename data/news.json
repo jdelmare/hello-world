@@ -3,6 +3,14 @@
   "items": [
     {
       "date": "2026-09-28",
+      "kind": "social",
+      "title": "Show HN: Redthread – autonomous LLM pentesting with proof-of-concept exploits",
+      "source": "Hacker News",
+      "url": "https://millenniums.ai/docs",
+      "models": []
+    },
+    {
+      "date": "2026-09-28",
       "kind": "article",
       "title": "FBI job portals remain offline after ShinyHunters claims breach via PeopleSoft zero-day",
       "source": "Help Net Security",
@@ -59,6 +67,18 @@
       "url": "https://ibragim.dev/leaderboard/",
       "models": [
         "claude-opus-5-5",
+        "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-27",
+      "kind": "social",
+      "title": "BenchLM ExploitGym table refresh adds GPT-5.6 Terra at 23.2% and lists GPT-5.6 Sol at 33.7%",
+      "source": "BenchLM (aggregator)",
+      "url": "https://benchlm.ai/benchmarks/exploitgym",
+      "models": [
+        "gpt-5-6-terra",
+        "gpt-5-6-sol",
         "gpt-6-astra"
       ]
     },
@@ -185,6 +205,17 @@
       "source": "Dark Reading",
       "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-sandbox-escapes-forensic-readiness",
       "models": []
+    },
+    {
+      "date": "2026-09-24",
+      "kind": "official",
+      "title": "Submersion AI debuts 'Basin', a self-hosted cyber model, claiming 80.8% on CyberGym and two validated zero-days",
+      "source": "GlobeNewswire (vendor press release)",
+      "url": "https://www.globenewswire.com/news-release/2026/09/24/3368383/0/en/submersion-ai-debuts-basin-outperforming-frontier-cybersecurity-models-to-claim-top-10-global-ranking-on-cybergym.html",
+      "models": [
+        "basin",
+        "grok-4-7"
+      ]
     },
     {
       "date": "2026-09-24",
@@ -424,5 +455,5 @@
       ]
     }
   ],
-  "updated": "2026-09-28T16:52+00:00"
+  "updated": "2026-09-28T18:07+00:00"
 }

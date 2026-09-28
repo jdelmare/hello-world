@@ -43,6 +43,104 @@
   },
   "models": [
     {
+      "id": "feyospace-v1",
+      "name": "Feyospace-v1",
+      "provider": "other",
+      "category": "open",
+      "status": "active",
+      "released": "2026-09-08",
+      "access": "Open-weight cyber agent, sibling of Feyospace-s1 from the same independent team.",
+      "aliases": [
+        "Feyospace v1"
+      ],
+      "notes": "Named alongside Feyospace-s1 in CyberGym submission coverage; no separate verified score located. Secondary source only.",
+      "sources": [
+        {
+          "title": "Seven-person team's cyber agent hits 63.24% on CyberGym",
+          "url": "https://aiweekly.co/editors-blog/found-first-seven-person-team-s-cyber-agent-hits-63-24-on-cybergym-ranks-1st-at"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": null
+    },
+    {
+      "id": "feyospace-s1",
+      "name": "Feyospace-s1",
+      "provider": "other",
+      "category": "open",
+      "status": "active",
+      "released": "2026-09-08",
+      "access": "Open-weight cyber agent from an independent 7-person team (Zongjie Li et al.); submitted to the CyberGym leaderboard.",
+      "aliases": [
+        "Feyospace s1"
+      ],
+      "notes": "Reported 63.24% verified success on CyberGym, 10th overall as of 2026-09-01. Coverage is secondary (aiweekly.co); no primary team writeup or repo verified yet.",
+      "sources": [
+        {
+          "title": "Seven-person team's cyber agent hits 63.24% on CyberGym",
+          "url": "https://aiweekly.co/editors-blog/found-first-seven-person-team-s-cyber-agent-hits-63-24-on-cybergym-ranks-1st-at"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": {
+        "index": 56.6,
+        "n": 1
+      }
+    },
+    {
+      "id": "basin",
+      "name": "Basin (Submersion AI)",
+      "provider": "other",
+      "category": "gated",
+      "status": "active",
+      "released": "2026-09-24",
+      "access": "Cyber-specific model deployed entirely in customer infrastructure (on-prem, private cloud, air-gapped); vendor-gated.",
+      "aliases": [
+        "Basin"
+      ],
+      "notes": "New vendor Submersion AI; positioned against hosted-model policy constraints. All capability claims to date are vendor self-reported in a press release, including two validated zero-days (CVE-2026-86733 Snipe-IT, CVE-2026-82450 BookStack). No independent evaluation located.",
+      "sources": [
+        {
+          "title": "Submersion AI debuts Basin (GlobeNewswire press release)",
+          "url": "https://www.globenewswire.com/news-release/2026/09/24/3368383/0/en/submersion-ai-debuts-basin-outperforming-frontier-cybersecurity-models-to-claim-top-10-global-ranking-on-cybergym.html"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": {
+        "index": 62.2,
+        "n": 1
+      }
+    },
+    {
+      "id": "gpt-5-6-terra",
+      "name": "GPT-5.6 Terra",
+      "provider": "openai",
+      "category": "ga",
+      "status": "active",
+      "released": null,
+      "access": "Generally available via OpenAI API and resellers (OpenRouter); ~1.05M context, $2/M in / $12/M out per API docs.",
+      "aliases": [
+        "GPT-5.6 Terra",
+        "Terra"
+      ],
+      "notes": "Mid-tier of the GPT-5.6 family (between Sol and Luna), successor to the mini tier. Shipping GA model that was missing from our registry; exact release date not established from a primary OpenAI announcement, so released is left null.",
+      "sources": [
+        {
+          "title": "OpenAI API docs — gpt-5.6-terra",
+          "url": "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+        },
+        {
+          "title": "OpenRouter — openai/gpt-5.6-terra",
+          "url": "https://openrouter.ai/openai/gpt-5.6-terra"
+        }
+      ],
+      "auto_added": "2026-09-28",
+      "index": {
+        "index": 51.9,
+        "n": 1
+      }
+    },
+    {
       "id": "gpt-5-6-cyber",
       "name": "GPT-5.6 Cyber",
       "provider": "openai",
@@ -462,7 +560,7 @@
         }
       ],
       "index": {
-        "index": 62.9,
+        "index": 65.8,
         "n": 2
       }
     },
@@ -774,5 +872,5 @@
       }
     }
   ],
-  "updated": "2026-09-28T16:52+00:00"
+  "updated": "2026-09-28T18:07+00:00"
 }

@@ -111,15 +111,6 @@
       "source": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf"
     },
     {
-      "model": "gpt-5-6-sol",
-      "benchmark": "exploitgym",
-      "value": 30.3,
-      "date": "2026-09-03",
-      "self_reported": true,
-      "note": "Reported in Astra system card",
-      "source": "https://deploymentsafety.openai.com/gpt-6-astra"
-    },
-    {
       "model": "claude-mythos-preview",
       "benchmark": "exploitgym",
       "value": 17.5,
@@ -364,6 +355,46 @@
       "self_reported": true,
       "note": "Reported as comparator alongside GPT-6 Sol/Luna; no injected actions taken. Self-reported, low-stakes test setup.",
       "source": "https://thenewstack.io/openai-gpt-6-sol-luna-release/",
+      "auto": true
+    },
+    {
+      "model": "gpt-5-6-terra",
+      "benchmark": "exploitgym",
+      "value": 23.2,
+      "date": "2026-09-27",
+      "self_reported": false,
+      "note": "Aggregator figure (BenchLM table refreshed 2026-09-27, 14 models). Not confirmed against a primary OpenAI or benchmark-owner run. Note that BenchLM describes ExploitGym as 898 containerized tasks while the benchmark repo states v1.0 = 869 instances, so denominators may differ across tables.",
+      "source": "https://benchlm.ai/benchmarks/exploitgym",
+      "auto": true
+    },
+    {
+      "model": "gpt-5-6-sol",
+      "benchmark": "exploitgym",
+      "value": 33.7,
+      "date": "2026-09-27",
+      "self_reported": false,
+      "note": "CONFLICTING DATA POINT: aggregator (BenchLM) shows 33.7% where our dashboard already carries 30.3% for the same model. Likely a different harness/run or task denominator; both are retained with provenance until a primary source resolves it.",
+      "source": "https://benchlm.ai/benchmarks/exploitgym",
+      "auto": true
+    },
+    {
+      "model": "basin",
+      "benchmark": "cybergym",
+      "value": 80.8,
+      "date": "2026-09-24",
+      "self_reported": true,
+      "note": "Vendor press-release claim (8th place at launch). Not verified by the benchmark owner or an independent evaluator. The same release asserts competitor scores (Grok 4.7, an unversioned 'Mythos', an 'Opus 4.8' we do not track) which we are not publishing.",
+      "source": "https://www.globenewswire.com/news-release/2026/09/24/3368383/0/en/submersion-ai-debuts-basin-outperforming-frontier-cybersecurity-models-to-claim-top-10-global-ranking-on-cybergym.html",
+      "auto": true
+    },
+    {
+      "model": "feyospace-s1",
+      "benchmark": "cybergym",
+      "value": 63.2,
+      "date": "2026-09-14",
+      "self_reported": false,
+      "note": "Reported as 'verified success' rate, 10th overall as of 2026-09-01; secondary coverage of a CyberGym leaderboard submission rather than a primary team or benchmark-owner report.",
+      "source": "https://aiweekly.co/editors-blog/found-first-seven-person-team-s-cyber-agent-hits-63-24-on-cybergym-ranks-1st-at",
       "auto": true
     }
   ]

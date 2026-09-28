@@ -3,6 +3,21 @@
     {
       "date": "2026-09-28",
       "models": {
+        "feyospace-v1": {
+          "buzz": 0
+        },
+        "feyospace-s1": {
+          "index": 56.6,
+          "buzz": 0
+        },
+        "basin": {
+          "index": 62.2,
+          "buzz": 0
+        },
+        "gpt-5-6-terra": {
+          "index": 51.9,
+          "buzz": 0
+        },
         "gpt-5-6-cyber": {
           "buzz": 0
         },
@@ -83,13 +98,13 @@
         "gpt-6-astra": {
           "index": 75.8,
           "capability": 95,
-          "concern": 89,
-          "tone": -0.08,
+          "concern": 91,
+          "tone": -0.13,
           "buzz": 5
         },
         "gpt-5-6-sol": {
-          "index": 62.9,
-          "capability": 82,
+          "index": 65.8,
+          "capability": 83,
           "concern": 83,
           "tone": -0.35,
           "buzz": 0
@@ -127,7 +142,7 @@
           "buzz": 0
         },
         "grok-4-7": {
-          "capability": 57,
+          "capability": 59,
           "concern": 39,
           "tone": 0.06,
           "buzz": 0
