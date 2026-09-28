@@ -6,7 +6,7 @@ notable commentary — that the feeds may have missed (X/LinkedIn posts, podcast
 show notes, lab system cards).
 
 Pass 2 (extract): Claude reads the research brief plus the collected feed items
-and returns a validated DailyUpdate object (structured outputs), which
+and returns JSON that is validated item by item into a DailyUpdate, which
 update.py merges into the data files.
 """
 
@@ -15,10 +15,10 @@ from __future__ import annotations
 import json
 import os
 import sys
-from typing import Literal, Optional
+from typing import Literal, Optional, get_args
 
 import anthropic
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 
 MODEL = "claude-opus-5"
 
@@ -202,17 +202,59 @@ ecosystem) only if the landscape changed; otherwise return an empty list.
 - trend_points: new values for indicator ids aisi_doubling_months or open_weight_lag_months only.
 - run_summary: 1-2 sentences on what changed today.
 Use only model ids from the registry or from new_models."""
-    resp = client.messages.parse(
-        model=MODEL,
-        max_tokens=16000,
-        system=SYSTEM,
-        messages=[{"role": "user", "content": prompt}],
-        output_format=DailyUpdate,
-    )
-    if resp.stop_reason == "refusal":
-        log("extraction pass refused")
-        return None
-    return resp.parsed_output
+    # The DailyUpdate schema is too large for constrained decoding ("compiled grammar is too
+    # large"), so ask for plain JSON and validate item by item: one bad entry is dropped
+    # instead of discarding the whole day's update.
+    prompt += ("\n\nReturn only a JSON object (no prose, no code fences) that matches this JSON Schema:\n"
+               + json.dumps(DailyUpdate.model_json_schema()))
+    messages = [{"role": "user", "content": prompt}]
+    for attempt in range(2):
+        resp = client.messages.create(model=MODEL, max_tokens=16000, system=SYSTEM, messages=messages)
+        if resp.stop_reason == "refusal":
+            log("extraction pass refused")
+            return None
+        text = "".join(b.text for b in resp.content if b.type == "text")
+        try:
+            return _lenient_update(_json_object(text))
+        except ValueError as e:
+            log(f"extraction output was not valid JSON ({e}); attempt {attempt + 1}")
+            messages += [{"role": "assistant", "content": resp.content},
+                         {"role": "user", "content": f"That was not a valid JSON object ({e}). "
+                                                     "Return only the JSON object."}]
+    return None
+
+
+def _json_object(text: str) -> dict:
+    start, end = text.find("{"), text.rfind("}")
+    if start < 0 or end <= start:
+        raise ValueError("no JSON object found")
+    try:
+        data = json.loads(text[start:end + 1])
+    except json.JSONDecodeError as e:
+        raise ValueError(str(e)) from None
+    if not isinstance(data, dict):
+        raise ValueError("top level is not an object")
+    return data
+
+
+def _lenient_update(data: dict) -> DailyUpdate:
+    fields: dict = {"run_summary": str(data.get("run_summary") or "")}
+    dropped = 0
+    for name, field in DailyUpdate.model_fields.items():
+        if name == "run_summary":
+            continue
+        (item_type,) = get_args(field.annotation)
+        raw = data.get(name) or []
+        items = []
+        for x in raw if isinstance(raw, list) else []:
+            try:
+                items.append(item_type.model_validate(x))
+            except ValidationError:
+                dropped += 1
+        fields[name] = items
+    if dropped:
+        log(f"dropped {dropped} malformed item(s) from extraction output")
+    return DailyUpdate(**fields)
 
 
 def run(today: str, models: dict, benchmarks: dict, incidents: dict, perception: dict,
