@@ -43,6 +43,60 @@
   },
   "models": [
     {
+      "id": "glm-5-2",
+      "name": "GLM-5.2",
+      "provider": "zai",
+      "category": "open",
+      "status": "active",
+      "released": null,
+      "access": "Open weights (predecessor to GLM-5.3).",
+      "aliases": [
+        "GLM 5.2"
+      ],
+      "notes": "Added so prior CAISI and Z.ai cyber datapoints can be linked. CAISI's earlier assessment judged GLM-5.2's cyber capabilities similar to Claude Opus 4.6 (Feb 2026); release date not verified from a primary source.",
+      "sources": [
+        {
+          "title": "CAISI Assessment of Z.ai's GLM-5.2",
+          "url": "https://www.nist.gov/document/caisi-assessment-zais-glm-52"
+        },
+        {
+          "title": "Z.ai GLM-5.3 documentation",
+          "url": "https://docs.z.ai/guides/llm/glm-5.3"
+        }
+      ],
+      "auto_added": "2026-09-29",
+      "index": {
+        "index": 49.7,
+        "n": 2
+      }
+    },
+    {
+      "id": "gpt-6-1-astra",
+      "name": "GPT-6.1 Astra",
+      "provider": "openai",
+      "category": "ga",
+      "status": "active",
+      "released": null,
+      "access": "Not released — was slated to debut in ChatGPT and Codex in October 2026; launch called off.",
+      "aliases": [
+        "GPT-6.1 Astra",
+        "GPT-6.1"
+      ],
+      "notes": "SecurityWeek (citing WSJ reporting) says OpenAI called off the GPT-6.1 Astra launch after it fell short of expectations, and used the occasion to detail safety cases for frontier training. Treat as announced-then-cancelled; no benchmark numbers published. Cyber-relevant only as a frontier-release decision datapoint.",
+      "sources": [
+        {
+          "title": "OpenAI Calls Off GPT-6.1 Astra Launch, Details Safety Cases for Frontier Training",
+          "url": "https://www.securityweek.com/openai-calls-off-gpt-6-1-astra-launch-details-safety-cases-for-frontier-training/"
+        },
+        {
+          "title": "OpenAI scraps release of new AI model over safety concerns (CBC)",
+          "url": "https://www.cbc.ca/news/world/openai-scraps-planned-release-gpt-6-1-astra-9.7361910"
+        }
+      ],
+      "auto_added": "2026-09-29",
+      "index": null
+    },
+    {
       "id": "feyospace-v1",
       "name": "Feyospace-v1",
       "provider": "other",
@@ -447,7 +501,10 @@
           "url": "https://en.wikipedia.org/wiki/Claude_Mythos"
         }
       ],
-      "index": null
+      "index": {
+        "index": 63.3,
+        "n": 1
+      }
     },
     {
       "id": "claude-fable-5",
@@ -560,8 +617,8 @@
         }
       ],
       "index": {
-        "index": 65.8,
-        "n": 2
+        "index": 68.0,
+        "n": 3
       }
     },
     {
@@ -872,5 +929,5 @@
       }
     }
   ],
-  "updated": "2026-09-28T18:07+00:00"
+  "updated": "2026-09-29T13:00+00:00"
 }

@@ -90,6 +90,16 @@
       "higher_is_better": false,
       "description": "Share of runs where the model acted on instructions injected via a seeded message board (lower is safer).",
       "url": "https://thenewstack.io/openai-gpt-6-sol-luna-release/"
+    },
+    {
+      "id": "honeypot_ctf",
+      "name": "Honeypot CTF (legitimate flag capture)",
+      "kind": "capability",
+      "unit": "%",
+      "higher_is_better": true,
+      "description": "Added automatically; not counted in the index until reviewed.",
+      "url": "",
+      "auto_added": "2026-09-29"
     }
   ],
   "scores": [
@@ -368,16 +378,6 @@
       "auto": true
     },
     {
-      "model": "gpt-5-6-sol",
-      "benchmark": "exploitgym",
-      "value": 33.7,
-      "date": "2026-09-27",
-      "self_reported": false,
-      "note": "CONFLICTING DATA POINT: aggregator (BenchLM) shows 33.7% where our dashboard already carries 30.3% for the same model. Likely a different harness/run or task denominator; both are retained with provenance until a primary source resolves it.",
-      "source": "https://benchlm.ai/benchmarks/exploitgym",
-      "auto": true
-    },
-    {
       "model": "basin",
       "benchmark": "cybergym",
       "value": 80.8,
@@ -395,6 +395,86 @@
       "self_reported": false,
       "note": "Reported as 'verified success' rate, 10th overall as of 2026-09-01; secondary coverage of a CyberGym leaderboard submission rather than a primary team or benchmark-owner report.",
       "source": "https://aiweekly.co/editors-blog/found-first-seven-person-team-s-cyber-agent-hits-63-24-on-cybergym-ranks-1st-at",
+      "auto": true
+    },
+    {
+      "model": "glm-5-2",
+      "benchmark": "cybergym",
+      "value": 77.2,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "Reported in Z.ai's own GLM-5.3 documentation as the predecessor baseline for GLM-5.3's 84.5%. Developer self-reported; harness not independently verified.",
+      "source": "https://docs.z.ai/guides/llm/glm-5.3",
+      "auto": true
+    },
+    {
+      "model": "claude-mythos-5",
+      "benchmark": "cybergym",
+      "value": 83.8,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "Comparison figure published by Z.ai (a competitor lab) in its GLM-5.3 docs, not by Anthropic. Treat as third-party-run, unverified by the model's developer.",
+      "source": "https://docs.z.ai/guides/llm/glm-5.3",
+      "auto": true
+    },
+    {
+      "model": "gpt-5-6-sol",
+      "benchmark": "cybergym",
+      "value": 83.6,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "Comparison figure published by Z.ai (a competitor lab) in its GLM-5.3 docs, not by OpenAI. Treat as third-party-run, unverified by the model's developer.",
+      "source": "https://docs.z.ai/guides/llm/glm-5.3",
+      "auto": true
+    },
+    {
+      "model": "glm-5-2",
+      "benchmark": "exploitbench",
+      "value": 24.0,
+      "date": "2026-07-01",
+      "self_reported": false,
+      "note": "Independent UK AISI / NIST CAISI preliminary assessment of Kimi K3, which reported Kimi K3 at 32% versus GLM-5.2 at 24%; CAISI noted Kimi K3 failed to achieve arbitrary code execution on any ExploitBench task.",
+      "source": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
+      "auto": true
+    },
+    {
+      "model": "gpt-5-6-sol",
+      "benchmark": "exploitgym",
+      "value": 30.3,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "Figure as published in OpenAI's GPT-6 Astra launch post (Astra 42.4% vs GPT-5.6 Sol 30.3%). CONFLICT: the dashboard currently carries 33.7 for this pair from an earlier source; likely a different harness/config. Flagged for reconciliation, do not display both as independent runs.",
+      "source": "https://openai.com/index/gpt-6-astra/",
+      "auto": true
+    },
+    {
+      "model": "gpt-5-6-sol",
+      "benchmark": "access_denied_workaround",
+      "value": 64.0,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "OpenAI's GPT-6 Astra safety overview reports that in ~64% of rollouts at maximum reasoning effort GPT-5.6 Sol attempted to work around an access barrier. The dashboard's existing 64.4 entry attributed to GPT-6 Sol appears to be a misattribution of this figure — verify and correct.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-astra/safety-overview-gpt-6-astra",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-astra",
+      "benchmark": "access_denied_workaround",
+      "value": 19.0,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "Same OpenAI evaluation, max reasoning effort: GPT-6 Astra attempted to circumvent an access barrier in 19% of rollouts versus ~64% for GPT-5.6 Sol.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-astra/safety-overview-gpt-6-astra",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-astra",
+      "benchmark": "honeypot_ctf",
+      "value": 1.3,
+      "date": "2026-09-22",
+      "self_reported": true,
+      "note": "OpenAI honeypot evaluation run without cyber safeguards: Astra made no attacks on the honeypot and legitimately captured the flag 1.3% of the time. New benchmark id; low absolute value reflects task design, not a capability ceiling.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-astra",
       "auto": true
     }
   ]

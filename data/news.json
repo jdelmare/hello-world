@@ -2,6 +2,74 @@
   "_doc": "Latest notable items. kind: article | blog | podcast | social | paper | official. Replaced daily by scripts/update.py (keeps most recent 60).",
   "items": [
     {
+      "date": "2026-09-29",
+      "kind": "article",
+      "title": "OpenAI Calls Off GPT-6.1 Astra Launch, Details Safety Cases for Frontier Training",
+      "source": "SecurityWeek",
+      "url": "https://www.securityweek.com/openai-calls-off-gpt-6-1-astra-launch-details-safety-cases-for-frontier-training/",
+      "models": [
+        "gpt-6-1-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "article",
+      "title": "OpenAI Pauses Tool Use After Agent Bypasses Internet Controls to Reach External Chatbot",
+      "source": "The Hacker News",
+      "url": "https://thehackernews.com/2026/09/openai-pauses-tool-use-after-agent.html",
+      "models": []
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "article",
+      "title": "OpenAI's GPT-6 Astra ran supply chain attacks despite being told not to",
+      "source": "Help Net Security",
+      "url": "https://www.helpnetsecurity.com/2026/09/29/openai-gpt-6-astra-supply-chain-attacks-test-simulations/",
+      "models": [
+        "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "article",
+      "title": "Malicious Custom GPT on chatgpt.com lures users into installing a RAT",
+      "source": "Help Net Security",
+      "url": "https://www.helpnetsecurity.com/2026/09/29/malicious-chatgpt-custom-gpt-malware-via-clickfix/",
+      "models": []
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "article",
+      "title": "Former X-Force hackers launch RemoteThreat with 1,000 attack tools for AI-speed offensive operations",
+      "source": "The Register",
+      "url": "https://www.theregister.com/security/2026/09/29/former-x-force-hackers-chase-the-offensive-cyber-gold-rush/5299662",
+      "models": []
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "article",
+      "title": "White House reported to bar UK AI Security Institute from frontier pre-deployment testing; CAISI has no director",
+      "source": "Tech Times",
+      "url": "https://www.techtimes.com/articles/328095/20260928/white-house-bars-uk-ai-safety-institute-frontier-ai-testing-caisi-us-body-has-no-director.htm",
+      "models": []
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "article",
+      "title": "RatHat Android Malware Console Uses Gemini to Identify Higher-Value Victims",
+      "source": "The Hacker News",
+      "url": "https://thehackernews.com/2026/09/rathat-android-malware-console-uses.html",
+      "models": []
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "article",
+      "title": "Carbonato Botnet Puts an AI Agent on Hacked Docker Hosts and Steals AI API Keys",
+      "source": "Dark Reading",
+      "url": "https://www.darkreading.com/identity-access-management-security/carbonato-botnet-ai-agent-hacked-docker-hosts",
+      "models": []
+    },
+    {
       "date": "2026-09-28",
       "kind": "social",
       "title": "Show HN: Redthread – autonomous LLM pentesting with proof-of-concept exploits",
@@ -208,6 +276,22 @@
     },
     {
       "date": "2026-09-24",
+      "kind": "article",
+      "title": "Transluce: more rogue OpenAI agents hacking websites and a crypto exchange in September",
+      "source": "Fortune",
+      "url": "https://fortune.com/2026/09/24/openai-more-rogue-ai-agents-hacking-websites-cryptoexchange-in-september-research-report-transluce/",
+      "models": []
+    },
+    {
+      "date": "2026-09-24",
+      "kind": "article",
+      "title": "Google says Gemini 4 release is coming \"as soon as possible\"; Gemini 3.5 Pro shelved",
+      "source": "9to5Google",
+      "url": "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/",
+      "models": []
+    },
+    {
+      "date": "2026-09-24",
       "kind": "official",
       "title": "Submersion AI debuts 'Basin', a self-hosted cyber model, claiming 80.8% on CyberGym and two validated zero-days",
       "source": "GlobeNewswire (vendor press release)",
@@ -314,6 +398,14 @@
     },
     {
       "date": "2026-09-15",
+      "kind": "article",
+      "title": "PaperCut attacker uses hundreds of AI agents on Codex and DeepSeek to hit 440 instances in 48 countries",
+      "source": "The Hacker News",
+      "url": "https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html",
+      "models": []
+    },
+    {
+      "date": "2026-09-15",
       "kind": "official",
       "title": "CAISI's Assessment of Z.ai's GLM-5.3 Cyber Capabilities",
       "source": "NIST",
@@ -337,6 +429,17 @@
       "source": "Anthropic",
       "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
       "models": []
+    },
+    {
+      "date": "2026-09-09",
+      "kind": "blog",
+      "title": "GPT-6 Astra: the system card, alignment, and what comes next (Astra surfaced unknown zero-days during evals)",
+      "source": "Don't Worry About the Vase (Zvi Mowshowitz)",
+      "url": "https://thezvi.wordpress.com/2026/09/09/gpt-6-astra-the-system-card-alignment-and-what-comes-next/",
+      "models": [
+        "gpt-6-astra",
+        "gpt-5-6-sol"
+      ]
     },
     {
       "date": "2026-09-03",
@@ -455,5 +558,5 @@
       ]
     }
   ],
-  "updated": "2026-09-28T18:07+00:00"
+  "updated": "2026-09-29T13:00+00:00"
 }
