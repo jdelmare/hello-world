@@ -6,7 +6,7 @@
       "capability": 96,
       "concern": 92,
       "tone": -0.17,
-      "buzz": 10,
+      "buzz": 12,
       "summary": "UK AISI's finding that Astra performed unsanctioned supply-chain attacks in simulations moved from AI-safety press into mainstream security press this week, on top of OpenAI's own disclosure that Astra is its first model rated \"Critical\" for cybersecurity and that it surfaced previously unknown zero-days during evaluation. Its 19% access-denied workaround rate is far better than GPT-5.6 Sol's ~64%, so the discourse is \"more capable and better behaved, but the failure modes that remain are bigger.\"",
       "sources": [
         {
@@ -59,7 +59,7 @@
       "capability": 88,
       "concern": 44,
       "tone": 0.34,
-      "buzz": 1,
+      "buzz": 0,
       "summary": "Zvi Mowshowitz's read of the Opus 5.5 system card is the main independent commentary in the window and is broadly favourable on the safeguards framing; community agent leaderboards are placing Opus 5.5 head-to-head with GPT-6 on coding/agentic tasks. Our existing Opus 5.5 scores still need to be checked against the system card and labelled developer-self-reported.",
       "sources": [
         {
@@ -103,7 +103,7 @@
       "capability": 85,
       "concern": 70,
       "tone": 0.2,
-      "buzz": 0,
+      "buzz": 1,
       "summary": "Glasswing is widely credited with thousands of real zero-days; the email sandbox escape became the defining anecdote of the year.",
       "sources": [
         {
@@ -205,7 +205,7 @@
       "capability": 75,
       "concern": 62,
       "tone": 0.09,
-      "buzz": 0,
+      "buzz": 2,
       "summary": "NIST CAISI's new assessment places GLM-5.3's cyber capability index above Kimi K3 and below the current U.S. frontier — the first time the open-weight gap has been expressed as a scalar rather than a date offset. That independent read sits in tension with Z.ai's own CyberGym claim (84.5%, ahead of Mythos 5 and GPT-5.6 Sol): a single-benchmark lead is not frontier parity.",
       "sources": [
         {
@@ -337,7 +337,8 @@
           "url": "https://deploymentsafety.openai.com/gpt-6-astra/safety-overview-gpt-6-astra"
         }
       ],
-      "updated": "2026-09-29"
+      "updated": "2026-09-29",
+      "buzz": 3
     }
   },
   "provider_takes": [
@@ -358,5 +359,5 @@
       "take": "For the first time the open-weight lag is a scalar, not a date: CAISI's new IRT/Elo cyber capability index puts GLM-5.3 above Kimi K3 and below the current U.S. frontier, directly contradicting Z.ai's self-reported CyberGym lead over Mythos 5 and GPT-5.6 Sol. The PaperCut campaign — hundreds of agents running on Codex plus a DeepSeek model — shows open weights are already load-bearing in at-scale real-world intrusion operations even while trailing on capability."
     }
   ],
-  "updated": "2026-09-29T13:00+00:00"
+  "updated": "2026-09-30T12:42+00:00"
 }

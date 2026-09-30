@@ -2,6 +2,80 @@
   "_doc": "Latest notable items. kind: article | blog | podcast | social | paper | official. Replaced daily by scripts/update.py (keeps most recent 60).",
   "items": [
     {
+      "date": "2026-09-30",
+      "kind": "social",
+      "title": "GPT-6.1 Sol replaces GPT-6 Sol after just 7 days, with near-Astra intelligence",
+      "source": "Hacker News",
+      "url": "https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence",
+      "models": [
+        "gpt-6-1-astra",
+        "gpt-6-sol",
+        "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "social",
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "source": "Hacker News",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "models": [
+        "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "social",
+      "title": "GPT-6 Astra is the best vision model we have tested",
+      "source": "Hacker News",
+      "url": "https://blog.roboflow.com/gpt-6-astra-vision/",
+      "models": [
+        "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "social",
+      "title": "GPT-6 UltraFast",
+      "source": "Hacker News",
+      "url": "https://developers.openai.com/api/docs/guides/ultrafast-mode",
+      "models": [
+        "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "social",
+      "title": "GPT-6.1 Astra Is Grounded: OpenAI's Safety Decision Puts the AI Race on Notice",
+      "source": "Hacker News",
+      "url": "https://predx-article.fika.bar/gpt-6-1-astra-is-grounded-openai-s-safety-decision-puts-the-01M3NFXDZ5S2X22FYZNNECEHK3",
+      "models": [
+        "gpt-6-1-astra",
+        "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "social",
+      "title": "GPT-6.1 Sol (Max): Intelligence, Performance and Price Analysis",
+      "source": "Hacker News",
+      "url": "https://artificialanalysis.ai/models/gpt-6-1-sol",
+      "models": [
+        "gpt-6-1-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "social",
+      "title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol",
+      "source": "Hacker News",
+      "url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "models": [
+        "gpt-6-1-astra",
+        "gpt-6-astra"
+      ]
+    },
+    {
       "date": "2026-09-29",
       "kind": "article",
       "title": "OpenAI Calls Off GPT-6.1 Astra Launch, Details Safety Cases for Frontier Training",
@@ -44,6 +118,17 @@
       "source": "The Register",
       "url": "https://www.theregister.com/security/2026/09/29/former-x-force-hackers-chase-the-offensive-cyber-gold-rush/5299662",
       "models": []
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "social",
+      "title": "WSJ reports OpenAI scrapped GPT-6.1 Astra over safety concerns",
+      "source": "Hacker News",
+      "url": "https://runtimewire.com/article/wsj-reports-openai-scrapped-gpt-6-1-astra-over-safety-concerns",
+      "models": [
+        "gpt-6-1-astra",
+        "gpt-6-astra"
+      ]
     },
     {
       "date": "2026-09-28",
@@ -482,81 +567,7 @@
         "claude-fable-5-1",
         "claude-mythos-5-1"
       ]
-    },
-    {
-      "date": "2026-08-21",
-      "kind": "blog",
-      "title": "We burned 11.7bn tokens to find the best cyber AI model",
-      "source": "Aikido",
-      "url": "https://www.aikido.dev/blog/ai-model-benchmarks-aug-21-2026",
-      "models": [
-        "glm-5-3",
-        "deepseek-v4-pro",
-        "kimi-k3"
-      ]
-    },
-    {
-      "date": "2026-08-08",
-      "kind": "article",
-      "title": "Meta AI breaches external firm during security testing sandbox error",
-      "source": "NPR",
-      "url": "https://www.npr.org/2026/08/08/nx-s1-5924878/meta-ai-breaches-external-firm-during-security-testing-sandbox-error",
-      "models": [
-        "muse-spark-1-3"
-      ]
-    },
-    {
-      "date": "2026-08-07",
-      "kind": "article",
-      "title": "China's Kimi K3 broke out of its test sandbox",
-      "source": "The Next Web",
-      "url": "https://thenextweb.com/news/kimi-k3-sandbox-escape-aisi-benchmark-cheating-open-weight",
-      "models": [
-        "kimi-k3"
-      ]
-    },
-    {
-      "date": "2026-07-30",
-      "kind": "official",
-      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals",
-      "models": [
-        "claude-opus-4-7",
-        "claude-mythos-5"
-      ]
-    },
-    {
-      "date": "2026-07-24",
-      "kind": "article",
-      "title": "How OpenAI Lost Control of an AI Model—and What Needs to Change",
-      "source": "TIME",
-      "url": "https://time.com/article/2026/07/24/openai-hugging-face-attack/",
-      "models": [
-        "gpt-5-6-sol"
-      ]
-    },
-    {
-      "date": "2026-05-14",
-      "kind": "official",
-      "title": "How fast is autonomous AI cyber capability advancing?",
-      "source": "UK AISI",
-      "url": "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing",
-      "models": [
-        "claude-mythos-preview",
-        "gpt-5-5"
-      ]
-    },
-    {
-      "date": "2026-04-10",
-      "kind": "podcast",
-      "title": "Claude Mythos, Project Glasswing and AI cybersecurity risks",
-      "source": "IBM Mixture of Experts",
-      "url": "https://www.ibm.com/think/podcasts/mixture-of-experts/claude-mythos-project-glasswing-ai-cybersecurity",
-      "models": [
-        "claude-mythos-preview"
-      ]
     }
   ],
-  "updated": "2026-09-29T13:00+00:00"
+  "updated": "2026-09-30T12:42+00:00"
 }
