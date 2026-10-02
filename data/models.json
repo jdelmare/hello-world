@@ -43,6 +43,94 @@
   },
   "models": [
     {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "provider": "anthropic",
+      "category": "ga",
+      "status": "active",
+      "released": "2026-09-28",
+      "access": "Generally available; priced at $2/M input and $10/M output.",
+      "aliases": [
+        "Sonnet 5.5"
+      ],
+      "notes": "Positioned for bounded everyday tasks (bug fixing, documents) with >30% faster output than Sonnet 5. No cyber-specific capability claims or cyber eval numbers surfaced in this window; tracked for completeness because it is referenced in third-party coding/benchmark comparisons against Argon.",
+      "sources": [
+        {
+          "title": "9to5Mac: Anthropic upgrades Claude with new Sonnet 5.5 model",
+          "url": "https://9to5mac.com/2026/09/28/anthropic-upgrades-claude-with-new-sonnet-5-5-model-details-here/"
+        }
+      ],
+      "auto_added": "2026-10-02",
+      "index": null
+    },
+    {
+      "id": "gpt-6-1-sol",
+      "name": "GPT-6.1 Sol",
+      "provider": "openai",
+      "category": "ga",
+      "status": "active",
+      "released": "2026-09-29",
+      "access": "Generally available via API and in ChatGPT Work/Codex for Plus, Pro, Business, Enterprise and Edu tiers; replaced GPT-6 Sol roughly seven days after that model shipped.",
+      "aliases": [
+        "GPT-6.1 Sol",
+        "GPT 6.1 Sol"
+      ],
+      "notes": "Announced at OpenAI DevDay 2026 as \"near-Astra intelligence for a fifth of the price.\" Safety documentation published as an addendum to the GPT-6 Astra system card; no cyber-specific evaluation numbers located for it yet.",
+      "sources": [
+        {
+          "title": "OpenAI: Introducing GPT-6.1 Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+        },
+        {
+          "title": "OpenAI: Addendum to GPT-6 Astra System Card — GPT-6.1 Sol",
+          "url": "https://deploymentsafety.openai.com/gpt-6-1-sol"
+        },
+        {
+          "title": "Decrypt: Everything OpenAI announced at DevDay 2026",
+          "url": "https://decrypt.co/379584/openai-ai-agents-computers-devday-2026-everything-announced"
+        }
+      ],
+      "auto_added": "2026-10-02",
+      "index": null
+    },
+    {
+      "id": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "provider": "google",
+      "category": "gated",
+      "status": "active",
+      "released": "2026-09-30",
+      "access": "Gated: rolling out first to government users and trusted cyber defenders in Google's Fairwind Program; no announced date for general availability. Introductory pricing reported at $2/M input and $10/M output.",
+      "aliases": [
+        "Gemini 4",
+        "Argon"
+      ],
+      "notes": "Google positions Argon for software engineering, enterprise knowledge work and cyber defense, with a 1M-token output limit. Google states that for trusted defenders and internal teams it will release Argon \"without cyber guardrails,\" and self-reports that the model can \"autonomously find, validate, and patch critical software vulnerabilities.\" No system/model card or Frontier Safety Framework CCL determination located yet — highest-priority accuracy gap.",
+      "sources": [
+        {
+          "title": "Google: Gemini 4 Argon announcement",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+        },
+        {
+          "title": "Google DeepMind: Gemini for cyber",
+          "url": "https://deepmind.google/models/gemini/cyber/"
+        },
+        {
+          "title": "SecurityWeek: Google Launches Gemini 4 Argon With Guardrail-Free Access for Vetted Defenders",
+          "url": "https://www.securityweek.com/google-launches-gemini-4-argon-with-guardrail-free-access-for-vetted-defenders/"
+        },
+        {
+          "title": "The Hacker News: Google Rolls Out Gemini 4 Argon to Trusted Cyber Defenders, Plans Guardrail-Free Version",
+          "url": "https://thehackernews.com/2026/10/google-rolls-out-gemini-4-argon-to.html"
+        }
+      ],
+      "auto_added": "2026-10-02",
+      "index": {
+        "index": 67.4,
+        "n": 1
+      }
+    },
+    {
       "id": "glm-5-2",
       "name": "GLM-5.2",
       "provider": "zai",
@@ -435,7 +523,10 @@
           "url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf"
         }
       ],
-      "index": null
+      "index": {
+        "index": 64.1,
+        "n": 1
+      }
     },
     {
       "id": "claude-opus-5-5",
@@ -456,8 +547,8 @@
         }
       ],
       "index": {
-        "index": 71.5,
-        "n": 3
+        "index": 77.0,
+        "n": 4
       }
     },
     {
@@ -593,8 +684,8 @@
         }
       ],
       "index": {
-        "index": 75.8,
-        "n": 2
+        "index": 81.7,
+        "n": 3
       }
     },
     {
@@ -685,7 +776,7 @@
         }
       ],
       "index": {
-        "index": 67.4,
+        "index": 56.8,
         "n": 1
       }
     },
@@ -767,7 +858,10 @@
           "url": "https://releasebot.io/updates/xai"
         }
       ],
-      "index": null
+      "index": {
+        "index": 70.0,
+        "n": 1
+      }
     },
     {
       "id": "muse-spark-1-3",
@@ -929,5 +1023,5 @@
       }
     }
   ],
-  "updated": "2026-10-01T14:38+00:00"
+  "updated": "2026-10-02T12:45+00:00"
 }

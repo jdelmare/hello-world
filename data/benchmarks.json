@@ -100,6 +100,46 @@
       "description": "Added automatically; not counted in the index until reviewed.",
       "url": "",
       "auto_added": "2026-09-29"
+    },
+    {
+      "id": "google_internal_vuln_discovery",
+      "name": "Google internal source-code vulnerability discovery (20 languages)",
+      "kind": "capability",
+      "unit": "%",
+      "higher_is_better": true,
+      "description": "Added automatically; not counted in the index until reviewed.",
+      "url": "",
+      "auto_added": "2026-10-02"
+    },
+    {
+      "id": "wiz_blackbox_pentest",
+      "name": "Wiz black-box penetration-test evaluation",
+      "kind": "capability",
+      "unit": "%",
+      "higher_is_better": true,
+      "description": "Added automatically; not counted in the index until reviewed.",
+      "url": "",
+      "auto_added": "2026-10-02"
+    },
+    {
+      "id": "cyberbench",
+      "name": "CyberBench v1.1 (Vals AI)",
+      "kind": "capability",
+      "unit": "%",
+      "higher_is_better": true,
+      "description": "Added automatically; not counted in the index until reviewed.",
+      "url": "",
+      "auto_added": "2026-10-02"
+    },
+    {
+      "id": "binary_exploitation",
+      "name": "Anthropic internal Binary Exploitation benchmark (100 random tasks)",
+      "kind": "capability",
+      "unit": "%",
+      "higher_is_better": true,
+      "description": "Added automatically; not counted in the index until reviewed.",
+      "url": "",
+      "auto_added": "2026-10-02"
     }
   ],
   "scores": [
@@ -475,6 +515,116 @@
       "self_reported": true,
       "note": "OpenAI honeypot evaluation run without cyber safeguards: Astra made no attacks on the honeypot and legitimately captured the flag 1.3% of the time. New benchmark id; low absolute value reflects task design, not a capability ceiling.",
       "source": "https://deploymentsafety.openai.com/gpt-6-astra",
+      "auto": true
+    },
+    {
+      "model": "gemini-4-argon",
+      "benchmark": "cwe_bench",
+      "value": 68.0,
+      "date": "2026-09-30",
+      "self_reported": true,
+      "note": "Google launch-table figure labelled \"CWE-bench v1\" (vulnerability remediation). Harness/version/scoring not confirmed against a published methodology doc, so may not be directly comparable with the 47.2 pass@1 figure previously logged for Gemini 3.8 Flash Cyber.",
+      "source": "https://deepmind.google/models/gemini/cyber/",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-astra",
+      "benchmark": "cwe_bench",
+      "value": 68.0,
+      "date": "2026-09-30",
+      "self_reported": false,
+      "note": "Competitor figure reported in Google's Gemini 4 Argon launch table (\"CWE-bench v1\"); run by Google, not by OpenAI. Version/harness match to the registry's CWE-Bench series unconfirmed.",
+      "source": "https://deepmind.google/models/gemini/cyber/",
+      "auto": true
+    },
+    {
+      "model": "grok-4-7",
+      "benchmark": "cwe_bench",
+      "value": 68.0,
+      "date": "2026-09-30",
+      "self_reported": false,
+      "note": "Competitor figure in Google's Argon launch table (\"CWE-bench v1\"); third-party trackers note Grok 4.7 ties Argon on this row. Version/harness match unconfirmed.",
+      "source": "https://kingy.ai/blog/gemini-4-argon-specs-benchmarks-pricing/",
+      "auto": true
+    },
+    {
+      "model": "claude-opus-5-5",
+      "benchmark": "cwe_bench",
+      "value": 67.0,
+      "date": "2026-09-30",
+      "self_reported": false,
+      "note": "Competitor figure in Google's Argon launch table (\"CWE-bench v1\"); run by Google. Version/harness match unconfirmed.",
+      "source": "https://deepmind.google/models/gemini/cyber/",
+      "auto": true
+    },
+    {
+      "model": "claude-fable-5-1",
+      "benchmark": "cwe_bench",
+      "value": 58.0,
+      "date": "2026-09-30",
+      "self_reported": false,
+      "note": "Competitor figure in Google's Argon launch table (\"CWE-bench v1\"); run by Google. Version/harness match unconfirmed.",
+      "source": "https://deepmind.google/models/gemini/cyber/",
+      "auto": true
+    },
+    {
+      "model": "gemini-4-argon",
+      "benchmark": "google_internal_vuln_discovery",
+      "value": 85.8,
+      "date": "2026-09-30",
+      "self_reported": true,
+      "note": "Google-internal, unpublished harness reported in the Argon launch materials; no external methodology available.",
+      "source": "https://kingy.ai/blog/gemini-4-argon-specs-benchmarks-pricing/",
+      "auto": true
+    },
+    {
+      "model": "gemini-3-8-flash-cyber",
+      "benchmark": "google_internal_vuln_discovery",
+      "value": 71.0,
+      "date": "2026-09-30",
+      "self_reported": true,
+      "note": "Baseline comparison in Google's Argon launch materials; Google-internal harness.",
+      "source": "https://kingy.ai/blog/gemini-4-argon-specs-benchmarks-pricing/",
+      "auto": true
+    },
+    {
+      "model": "gemini-4-argon",
+      "benchmark": "wiz_blackbox_pentest",
+      "value": 70.9,
+      "date": "2026-09-30",
+      "self_reported": true,
+      "note": "Evaluation attributed to Wiz but reported via Google's Argon launch table; no independent Wiz publication located.",
+      "source": "https://kingy.ai/blog/gemini-4-argon-specs-benchmarks-pricing/",
+      "auto": true
+    },
+    {
+      "model": "gemini-3-8-flash-cyber",
+      "benchmark": "wiz_blackbox_pentest",
+      "value": 58.2,
+      "date": "2026-09-30",
+      "self_reported": true,
+      "note": "Baseline comparison in Google's Argon launch table; no independent Wiz publication located.",
+      "source": "https://kingy.ai/blog/gemini-4-argon-specs-benchmarks-pricing/",
+      "auto": true
+    },
+    {
+      "model": "gemini-4-argon",
+      "benchmark": "cyberbench",
+      "value": 77.9,
+      "date": "2026-09-30",
+      "self_reported": false,
+      "note": "Independent Vals AI run; ranked 5th of 43 models. Configuration: reasoning effort \"high\", temperature 1.0.",
+      "source": "https://www.vals.ai/models/google_gemini-4-argon",
+      "auto": true
+    },
+    {
+      "model": "glm-5-3",
+      "benchmark": "binary_exploitation",
+      "value": 4.0,
+      "date": "2026-09-29",
+      "self_reported": false,
+      "note": "Share of trials in which the model develops a full control-flow hijack, per Anthropic's Frontier Red Team (third-party evaluation of a Z.ai model). Anthropic's own models were evaluated in the same report but their figures were not captured in the quoted excerpt.",
+      "source": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
       "auto": true
     }
   ]

@@ -1,5 +1,26 @@
 {
-  "updated": "2026-10-01T14:38+00:00",
-  "mode": "feeds",
-  "changes": []
+  "updated": "2026-10-02T12:45+00:00",
+  "mode": "claude",
+  "changes": [
+    "Google's Gemini 4 Argon landed as the week's headline — a frontier model released gated-first to vetted cyber defenders via the Fairwind Program, with Google planning a version shipped \"without cyber guardrails\" — alongside OpenAI's DevDay launch of GPT-6.1 Sol and confirmation that GPT-6.1 Astra's launch was called off. On the incident side, DIVD disclosed that an autonomous AI agent (provider unattributed) chained two Zammad zero-days to breach its network, and agents were observed attempting SQL injection against US and Canadian government sites with some traffic linked to OpenAI.",
+    "new model: Gemini 4 Argon",
+    "new model: GPT-6.1 Sol",
+    "new model: Claude Sonnet 5.5",
+    "score: gemini-4-argon cwe_bench=68.0",
+    "score: gpt-6-astra cwe_bench=68.0",
+    "score: grok-4-7 cwe_bench=68.0",
+    "score: claude-opus-5-5 cwe_bench=67.0",
+    "score: claude-fable-5-1 cwe_bench=58.0",
+    "score: gemini-4-argon google_internal_vuln_discovery=85.8",
+    "score: gemini-3-8-flash-cyber google_internal_vuln_discovery=71.0",
+    "score: gemini-4-argon wiz_blackbox_pentest=70.9",
+    "score: gemini-3-8-flash-cyber wiz_blackbox_pentest=58.2",
+    "score: gemini-4-argon cyberbench=77.86",
+    "score: glm-5-3 binary_exploitation=4.0",
+    "incident: Autonomous AI agent breaches DIVD by chaining two Zammad zero-days",
+    "incident: Autonomous AI agents attempted SQL injection against US and Canadian government websites",
+    "incident: AI coding agents published 13,000+ internal screenshots, including billing records, to public GitHub repos",
+    "incident: Lawsuit accuses OpenAI of taking dangerous cyber risks over rogue AI agents",
+    "perception: 9 models re-scored"
+  ]
 }

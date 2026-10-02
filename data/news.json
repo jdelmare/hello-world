@@ -2,6 +2,56 @@
   "_doc": "Latest notable items. kind: article | blog | podcast | social | paper | official. Replaced daily by scripts/update.py (keeps most recent 60).",
   "items": [
     {
+      "date": "2026-10-02",
+      "kind": "social",
+      "title": "Yann LeCun calls Anthropic's CEO deluded on AI cybersecurity risk",
+      "source": "Fortune (via Hacker News)",
+      "url": "https://fortune.com/2026/10/01/yann-lecun-anthropic-ceo-dario-amodei-deluded-crazy-cybersecurity/",
+      "models": []
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "article",
+      "title": "Google plans a guardrail-free Gemini 4 Argon for vetted defenders and internal teams",
+      "source": "SecurityWeek / The Hacker News",
+      "url": "https://www.securityweek.com/google-launches-gemini-4-argon-with-guardrail-free-access-for-vetted-defenders/",
+      "models": [
+        "gemini-4-argon"
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "article",
+      "title": "AI agents aimed SQL injection at US and Canadian government sites; some agents linked to OpenAI",
+      "source": "SecurityWeek",
+      "url": "https://www.securityweek.com/ai-agents-aimed-sql-injection-at-us-and-canadian-government-sites/",
+      "models": []
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "article",
+      "title": "Microsoft says threat actors are currently ahead of defenders in the early AI race",
+      "source": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-says-threat-actors-are-ahead-in-the-early-ai-race/",
+      "models": []
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "paper",
+      "title": "KaliBench: a fine-grained benchmark for cybersecurity tool use on Kali Linux with runtime-free verifiable rewards",
+      "source": "arXiv cs.CR",
+      "url": "https://arxiv.org/abs/2610.02206v1",
+      "models": []
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "article",
+      "title": "PwC: only 22% of leaders would use fully autonomous AI for cyber defense; attacks on AI systems top the unreadiness list",
+      "source": "SecurityWeek / Help Net Security",
+      "url": "https://www.securityweek.com/enterprises-struggle-to-prepare-for-ai-and-quantum-threats-pwc-says/",
+      "models": []
+    },
+    {
       "date": "2026-10-01",
       "kind": "social",
       "title": "GPT-6 Astra breaks unsolved cipher to one of Napoleon's generals",
@@ -10,6 +60,49 @@
       "models": [
         "gpt-6-astra"
       ]
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "official",
+      "title": "Google announces Gemini 4 Argon, rolled out first to trusted cyber defenders via the Fairwind Program",
+      "source": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "models": [
+        "gemini-4-argon",
+        "gemini-3-8-flash-cyber"
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "article",
+      "title": "DIVD says chained Zammad zero-days enabled an AI-driven network breach",
+      "source": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/",
+      "models": []
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "article",
+      "title": "AI coding agents exposed 13,000+ internal images, including billing records, in public GitHub repos",
+      "source": "The Hacker News / Glow Security",
+      "url": "https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html",
+      "models": []
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "social",
+      "title": "Vulnerability disclosures double to ~10,000 per month as AI fuels exploitation",
+      "source": "The Record (via Hacker News)",
+      "url": "https://therecord.media/google-vulnerabilities-cyberattacks-ai",
+      "models": []
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "article",
+      "title": "Lawsuit accuses OpenAI of taking dangerous cyber risks for private gain over rogue AI agents",
+      "source": "Fast Company",
+      "url": "https://www.fastcompany.com/91615759/openai-is-accused-of-taking-dangerous-cyber-risks-for-private-gain-in-lawsuit-over-rogue-ai-agents",
+      "models": []
     },
     {
       "date": "2026-09-30",
@@ -31,6 +124,28 @@
         "gpt-6-1-astra",
         "gpt-6-sol",
         "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "paper",
+      "title": "UK AISI technical report: Evaluating whether GPT-6 Astra performs unsanctioned supply-chain attacks",
+      "source": "arXiv (UK AI Security Institute)",
+      "url": "https://arxiv.org/abs/2609.38415v1",
+      "models": [
+        "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "blog",
+      "title": "Anthropic Frontier Red Team: GLM-5.3 develops full control-flow hijacks in 4% of binary-exploitation trials",
+      "source": "Simon Willison (quoting Anthropic Frontier Red Team)",
+      "url": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
+      "models": [
+        "glm-5-3",
+        "glm-5-2",
+        "claude-mythos-preview"
       ]
     },
     {
@@ -439,134 +554,7 @@
       "models": [
         "claude-opus-5-5"
       ]
-    },
-    {
-      "date": "2026-09-22",
-      "kind": "blog",
-      "title": "GPT-6 Sol and Luna shipped with no system card and no Preparedness rating",
-      "source": "handyai (Substack)",
-      "url": "https://handyai.substack.com/p/model-drop-gpt-6-sol-and-gpt-6-luna",
-      "models": [
-        "gpt-6-sol",
-        "gpt-6-luna"
-      ]
-    },
-    {
-      "date": "2026-09-22",
-      "kind": "official",
-      "title": "Anthropic opens a cyber-jailbreak disclosure program for the Fable family (no bounty)",
-      "source": "HackerOne",
-      "url": "https://hackerone.com/anthropic-cyber-jailbreak/",
-      "models": [
-        "claude-fable-5-1",
-        "claude-fable-5"
-      ]
-    },
-    {
-      "date": "2026-09-22",
-      "kind": "article",
-      "title": "Xiaomi ships MiMo-V2.6 open weights at frontier-class scores — vendor-reported CyberGym 94.0%",
-      "source": "Forkast",
-      "url": "https://forkast.news/xiaomis-mimo-v2-6-ships-open-weights-at-frontier-class-performance-and-the-timing-is-not-an-accident/",
-      "models": [
-        "mimo-v2-6-pro",
-        "mimo-v2-6-flash"
-      ]
-    },
-    {
-      "date": "2026-09-22",
-      "kind": "official",
-      "title": "Claude Opus 5.5 System Card",
-      "source": "Anthropic",
-      "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
-      "models": [
-        "claude-opus-5-5"
-      ]
-    },
-    {
-      "date": "2026-09-21",
-      "kind": "article",
-      "title": "Google Gemini escaped test environments and hacked three real companies",
-      "source": "Cybersecurity Dive",
-      "url": "https://www.cybersecuritydive.com/news/google-ai-gemini-autonomous-hacks/830884/",
-      "models": []
-    },
-    {
-      "date": "2026-09-21",
-      "kind": "official",
-      "title": "xAI Grok 4.7 model card: HackerBench v0.3 risky-prompt pass-through 3.3%, CathedralBench red-team protocol",
-      "source": "xAI",
-      "url": "https://media.x.ai/v1/website/4p7card-5eccc980.pdf",
-      "models": [
-        "grok-4-7"
-      ]
-    },
-    {
-      "date": "2026-09-15",
-      "kind": "article",
-      "title": "PaperCut attacker uses hundreds of AI agents on Codex and DeepSeek to hit 440 instances in 48 countries",
-      "source": "The Hacker News",
-      "url": "https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html",
-      "models": []
-    },
-    {
-      "date": "2026-09-15",
-      "kind": "official",
-      "title": "CAISI's Assessment of Z.ai's GLM-5.3 Cyber Capabilities",
-      "source": "NIST",
-      "url": "https://www.nist.gov/news-events/news/2026/09/caisis-assessment-zais-glm-53-cyber-capabilities",
-      "models": [
-        "glm-5-3"
-      ]
-    },
-    {
-      "date": "2026-09-11",
-      "kind": "blog",
-      "title": "Anthropic's Misuse Report, Condensed to 117 Findings",
-      "source": "Daniel Miessler",
-      "url": "https://danielmiessler.com/blog/anthropic-misuse-report-september-2026",
-      "models": []
-    },
-    {
-      "date": "2026-09-10",
-      "kind": "official",
-      "title": "Countering misuse of AI: September 2026",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
-      "models": []
-    },
-    {
-      "date": "2026-09-09",
-      "kind": "blog",
-      "title": "GPT-6 Astra: the system card, alignment, and what comes next (Astra surfaced unknown zero-days during evals)",
-      "source": "Don't Worry About the Vase (Zvi Mowshowitz)",
-      "url": "https://thezvi.wordpress.com/2026/09/09/gpt-6-astra-the-system-card-alignment-and-what-comes-next/",
-      "models": [
-        "gpt-6-astra",
-        "gpt-5-6-sol"
-      ]
-    },
-    {
-      "date": "2026-09-03",
-      "kind": "article",
-      "title": "OpenAI launches GPT-6 Astra, its first model to cross a critical cybersecurity threshold",
-      "source": "CSO Online",
-      "url": "https://www.csoonline.com/article/4218679/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold.html",
-      "models": [
-        "gpt-6-astra"
-      ]
-    },
-    {
-      "date": "2026-09-02",
-      "kind": "official",
-      "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
-      "source": "Google",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
-      "models": [
-        "gemini-3-8-flash",
-        "gemini-3-8-flash-cyber"
-      ]
     }
   ],
-  "updated": "2026-10-01T14:38+00:00"
+  "updated": "2026-10-02T12:45+00:00"
 }
