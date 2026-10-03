@@ -2,11 +2,61 @@
   "_doc": "Latest notable items. kind: article | blog | podcast | social | paper | official. Replaced daily by scripts/update.py (keeps most recent 60).",
   "items": [
     {
+      "date": "2026-10-03",
+      "kind": "article",
+      "title": "Vulnerability Discovery and Exploitation Trends in the AI Era",
+      "source": "Google Cloud Threat Intelligence",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/vulnerability-discovery-and-exploitation-trends-in-the-ai-era/",
+      "models": []
+    },
+    {
+      "date": "2026-10-02",
+      "kind": "article",
+      "title": "GitLab warns of critical RCE vulnerability in AI Gateway service",
+      "source": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/",
+      "models": []
+    },
+    {
+      "date": "2026-10-02",
+      "kind": "article",
+      "title": "Is It Fair to Blame 'Rogue' AI for Security Failures?",
+      "source": "Dark Reading",
+      "url": "https://www.darkreading.com/insider-threats/blame-rogue-ai-security-failures",
+      "models": []
+    },
+    {
       "date": "2026-10-02",
       "kind": "social",
       "title": "Yann LeCun calls Anthropic's CEO deluded on AI cybersecurity risk",
       "source": "Fortune (via Hacker News)",
       "url": "https://fortune.com/2026/10/01/yann-lecun-anthropic-ceo-dario-amodei-deluded-crazy-cybersecurity/",
+      "models": []
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "article",
+      "title": "Google Rolls Out Gemini 4 Argon to Trusted Cyber Defenders, Plans Guardrail-Free Version",
+      "source": "The Hacker News",
+      "url": "https://thehackernews.com/2026/10/google-rolls-out-gemini-4-argon-to.html",
+      "models": [
+        "gemini-4-argon"
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "article",
+      "title": "Autonomous AI agents tried to hack US, Canadian government websites",
+      "source": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/",
+      "models": []
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "article",
+      "title": "AI agents hacked the hackers, stealing email addresses from a security research org (chained Zammad flaws)",
+      "source": "The Register",
+      "url": "https://www.theregister.com/security/2026/10/01/ai-agents-hacked-the-hackers-stealing-email-addresses-from-security-research-org/5300652",
       "models": []
     },
     {
@@ -60,6 +110,14 @@
       "models": [
         "gpt-6-astra"
       ]
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "article",
+      "title": "Attackers abuse ChatGPT Custom GPTs to deliver a RAT via ClickFix lures",
+      "source": "The Hacker News",
+      "url": "https://thehackernews.com/2026/09/attackers-abuse-chatgpt-custom-gpts-to.html",
+      "models": []
     },
     {
       "date": "2026-09-30",
@@ -124,6 +182,30 @@
         "gpt-6-1-astra",
         "gpt-6-sol",
         "gpt-6-astra"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "official",
+      "title": "GPT-6.1 Sol system card addendum: Critical capability in Cybersecurity, Astra-level safeguards",
+      "source": "OpenAI",
+      "url": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "models": [
+        "gpt-6-1-sol",
+        "gpt-6-astra",
+        "gpt-6-sol",
+        "gpt-5-6-sol"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "article",
+      "title": "Claude Sonnet 5.5's cyber safeguards: flagged requests silently fall back to Sonnet 5",
+      "source": "The New Stack",
+      "url": "https://thenewstack.io/claude-sonnet-cyber-safeguards/",
+      "models": [
+        "claude-sonnet-5-5",
+        "claude-sonnet-5"
       ]
     },
     {
@@ -252,6 +334,27 @@
       "title": "Former X-Force hackers launch RemoteThreat with 1,000 attack tools for AI-speed offensive operations",
       "source": "The Register",
       "url": "https://www.theregister.com/security/2026/09/29/former-x-force-hackers-chase-the-offensive-cyber-gold-rush/5299662",
+      "models": []
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "official",
+      "title": "Claude Sonnet 5.5 System Card: 46.1% CyScenarioBench, 43.4% full ACE on ExploitBench, first Sonnet with cyber safeguards",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+      "models": [
+        "claude-sonnet-5-5",
+        "claude-sonnet-5",
+        "claude-opus-5-5",
+        "claude-mythos-5-1"
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "article",
+      "title": "OpenAI pauses training, evaluation and tool-use inference on its most capable models after agents reach government sites",
+      "source": "The Register",
+      "url": "https://www.theregister.com/ai-and-ml/2026/09/28/openai-pauses-some-training-amid-allegations-its-rogue-agents-behaved-more-badly-than-first-thought/5299350",
       "models": []
     },
     {
@@ -447,114 +550,7 @@
       "source": "Financial Times",
       "url": "https://www.ft.com/content/3f406fbe-b72e-488f-9975-5b94e95dfe32",
       "models": []
-    },
-    {
-      "date": "2026-09-26",
-      "kind": "social",
-      "title": "GPT-6 Astra won't try hard unless you ask",
-      "source": "Hacker News",
-      "url": "https://srcreigh.ca/posts/gpt-6-astra-wont-try-hard-unless-you-ask/",
-      "models": [
-        "gpt-6-astra"
-      ]
-    },
-    {
-      "date": "2026-09-26",
-      "kind": "official",
-      "title": "New on Hugging Face: 5yencat/GLM-5.3-Flash-CYBER-oQ4e-mtp",
-      "source": "Hugging Face",
-      "url": "https://huggingface.co/5yencat/GLM-5.3-Flash-CYBER-oQ4e-mtp",
-      "models": [
-        "glm-5-3"
-      ]
-    },
-    {
-      "date": "2026-09-25",
-      "kind": "article",
-      "title": "What we missed: Google Gemini joins the AI escape party",
-      "source": "Dark Reading",
-      "url": "https://www.darkreading.com/cyber-risk/what-we-missed-google-gemini-ai-escape-party",
-      "models": []
-    },
-    {
-      "date": "2026-09-25",
-      "kind": "article",
-      "title": "Daybreak Red and Blue: OpenAI's gated-access architecture, now with per-account hardware keys",
-      "source": "Forkast",
-      "url": "https://forkast.news/openais-fourth-cybersecurity-model-in-twelve-months-is-not-about-better-chatbots-it-is-about-gated-access-to-dangerous-capabilities/",
-      "models": [
-        "gpt-6-cyber"
-      ]
-    },
-    {
-      "date": "2026-09-25",
-      "kind": "article",
-      "title": "AI sandbox escapes: why forensic readiness matters more than containment",
-      "source": "Dark Reading",
-      "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-sandbox-escapes-forensic-readiness",
-      "models": []
-    },
-    {
-      "date": "2026-09-24",
-      "kind": "article",
-      "title": "Transluce: more rogue OpenAI agents hacking websites and a crypto exchange in September",
-      "source": "Fortune",
-      "url": "https://fortune.com/2026/09/24/openai-more-rogue-ai-agents-hacking-websites-cryptoexchange-in-september-research-report-transluce/",
-      "models": []
-    },
-    {
-      "date": "2026-09-24",
-      "kind": "article",
-      "title": "Google says Gemini 4 release is coming \"as soon as possible\"; Gemini 3.5 Pro shelved",
-      "source": "9to5Google",
-      "url": "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/",
-      "models": []
-    },
-    {
-      "date": "2026-09-24",
-      "kind": "official",
-      "title": "Submersion AI debuts 'Basin', a self-hosted cyber model, claiming 80.8% on CyberGym and two validated zero-days",
-      "source": "GlobeNewswire (vendor press release)",
-      "url": "https://www.globenewswire.com/news-release/2026/09/24/3368383/0/en/submersion-ai-debuts-basin-outperforming-frontier-cybersecurity-models-to-claim-top-10-global-ranking-on-cybergym.html",
-      "models": [
-        "basin",
-        "grok-4-7"
-      ]
-    },
-    {
-      "date": "2026-09-24",
-      "kind": "article",
-      "title": "OpenAI to preview GPT-6 Cyber and a security product at DevDay — its fourth cyber-specific model of 2026",
-      "source": "Fortune",
-      "url": "https://fortune.com/2026/09/24/openai-launching-gpt-6-cyber-model-and-security-product-devday/",
-      "models": [
-        "gpt-6-cyber",
-        "gpt-5-4-cyber",
-        "gpt-5-5-cyber",
-        "gpt-5-6-cyber"
-      ]
-    },
-    {
-      "date": "2026-09-23",
-      "kind": "blog",
-      "title": "Claude Opus 5.5: the system card — Opus 5.5 leads Mythos 5.1 on all cyber evals",
-      "source": "Zvi Mowshowitz",
-      "url": "https://thezvi.wordpress.com/2026/09/23/claude-opus-5-5-the-system-card/",
-      "models": [
-        "claude-opus-5-5",
-        "claude-mythos-5-1"
-      ]
-    },
-    {
-      "date": "2026-09-23",
-      "kind": "blog",
-      "title": "Claude Opus 5.5: The System Card",
-      "source": "Zvi Mowshowitz",
-      "url": "https://thezvi.substack.com/p/claude-opus-55-the-system-card",
-      "models": [
-        "claude-opus-5-5"
-      ]
     }
   ],
-  "updated": "2026-10-02T12:45+00:00"
+  "updated": "2026-10-03T11:45+00:00"
 }

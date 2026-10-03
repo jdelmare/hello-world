@@ -43,6 +43,34 @@
   },
   "models": [
     {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "provider": "anthropic",
+      "category": "ga",
+      "status": "active",
+      "released": "2026-06-30",
+      "access": "General availability; also used as the automatic fallback model for flagged higher-risk requests sent to Claude Sonnet 5.5.",
+      "aliases": [
+        "Sonnet 5"
+      ],
+      "notes": "Added to the registry as the comparison baseline named throughout the Claude Sonnet 5.5 system card (0.7% CyScenarioBench, no full ACE on ExploitBench, 3 control-flow hijacks on Anthropic's binary exploitation suite). Release date taken from the research brief's within-family comparison; worth re-confirming against Anthropic's own announcement before publishing a date.",
+      "sources": [
+        {
+          "title": "Claude Sonnet 5.5 System Card (Anthropic)",
+          "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card"
+        },
+        {
+          "title": "Claude Sonnet 5.5 ships with cyber safeguards (The New Stack)",
+          "url": "https://thenewstack.io/claude-sonnet-cyber-safeguards/"
+        }
+      ],
+      "auto_added": "2026-10-03",
+      "index": {
+        "index": 24.5,
+        "n": 2
+      }
+    },
+    {
       "id": "claude-sonnet-5-5",
       "name": "Claude Sonnet 5.5",
       "provider": "anthropic",
@@ -61,7 +89,10 @@
         }
       ],
       "auto_added": "2026-10-02",
-      "index": null
+      "index": {
+        "index": 53.0,
+        "n": 2
+      }
     },
     {
       "id": "gpt-6-1-sol",
@@ -1023,5 +1054,5 @@
       }
     }
   ],
-  "updated": "2026-10-02T12:45+00:00"
+  "updated": "2026-10-03T11:45+00:00"
 }

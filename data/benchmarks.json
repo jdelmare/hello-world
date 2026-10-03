@@ -140,6 +140,36 @@
       "description": "Added automatically; not counted in the index until reviewed.",
       "url": "",
       "auto_added": "2026-10-02"
+    },
+    {
+      "id": "unwanted_persistence_after_warning",
+      "name": "Unwanted persistence after an access warning",
+      "kind": "safeguard",
+      "unit": "%",
+      "higher_is_better": false,
+      "description": "Added automatically; not counted in the index until reviewed.",
+      "url": "",
+      "auto_added": "2026-10-03"
+    },
+    {
+      "id": "peer_coordination_unauthorized_action",
+      "name": "Peer-coordination eval: unauthorized action carried out",
+      "kind": "safeguard",
+      "unit": "%",
+      "higher_is_better": false,
+      "description": "Added automatically; not counted in the index until reviewed.",
+      "url": "",
+      "auto_added": "2026-10-03"
+    },
+    {
+      "id": "severity3_flag_rate",
+      "name": "Severity-3-or-higher safety flags (share of rollouts)",
+      "kind": "safeguard",
+      "unit": "%",
+      "higher_is_better": false,
+      "description": "Added automatically; not counted in the index until reviewed.",
+      "url": "",
+      "auto_added": "2026-10-03"
     }
   ],
   "scores": [
@@ -625,6 +655,146 @@
       "self_reported": false,
       "note": "Share of trials in which the model develops a full control-flow hijack, per Anthropic's Frontier Red Team (third-party evaluation of a Z.ai model). Anthropic's own models were evaluated in the same report but their figures were not captured in the quoted excerpt.",
       "source": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
+      "auto": true
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "benchmark": "cyscenariobench",
+      "value": 46.1,
+      "date": "2026-09-28",
+      "self_reported": true,
+      "note": "Anthropic self-reported, safeguards-off with escape classifiers on. Card reports Mythos 5.1 at 61.7% and Opus 5.5 at 67.6%, consistent with existing registry values. Benchmark is run by Irregular.",
+      "source": "https://www-cdn.anthropic.com/870c8f525702625d2c62fc6dd04c857e3250bec1/Claude%20Sonnet%205.5%20System%20Card.pdf",
+      "auto": true
+    },
+    {
+      "model": "claude-sonnet-5",
+      "benchmark": "cyscenariobench",
+      "value": 0.7,
+      "date": "2026-09-28",
+      "self_reported": true,
+      "note": "Baseline figure for Sonnet 5 reported in the Sonnet 5.5 card; same safeguards-off configuration.",
+      "source": "https://www-cdn.anthropic.com/870c8f525702625d2c62fc6dd04c857e3250bec1/Claude%20Sonnet%205.5%20System%20Card.pdf",
+      "auto": true
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "benchmark": "exploitbench",
+      "value": 43.4,
+      "date": "2026-09-28",
+      "self_reported": true,
+      "note": "Full arbitrary code execution in 178 of 410 runs across 41 CMU V8 environments; safeguards-off. Note this is a per-run success rate and may not be directly comparable to the per-instance figures already held for GPT/Opus models.",
+      "source": "https://www-cdn.anthropic.com/870c8f525702625d2c62fc6dd04c857e3250bec1/Claude%20Sonnet%205.5%20System%20Card.pdf",
+      "auto": true
+    },
+    {
+      "model": "claude-sonnet-5",
+      "benchmark": "exploitbench",
+      "value": 0.0,
+      "date": "2026-09-28",
+      "self_reported": true,
+      "note": "Sonnet 5 never achieved full arbitrary code execution in the same 41-environment CMU V8 harness, per the Sonnet 5.5 card.",
+      "source": "https://www-cdn.anthropic.com/870c8f525702625d2c62fc6dd04c857e3250bec1/Claude%20Sonnet%205.5%20System%20Card.pdf",
+      "auto": true
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "benchmark": "prompt_injection_action",
+      "value": 3.4,
+      "date": "2026-09-28",
+      "self_reported": true,
+      "note": "Gray Swan indirect prompt-injection attack success rate at 15 attempts (Sonnet 5: 6.7%). Different harness from the OpenAI prompt-injection figures already in the registry; do not treat as directly comparable. Card also reports 0 of 110 successful browser-use attacks without safeguards.",
+      "source": "https://www-cdn.anthropic.com/870c8f525702625d2c62fc6dd04c857e3250bec1/Claude%20Sonnet%205.5%20System%20Card.pdf",
+      "auto": true
+    },
+    {
+      "model": "claude-sonnet-5",
+      "benchmark": "prompt_injection_action",
+      "value": 6.7,
+      "date": "2026-09-28",
+      "self_reported": true,
+      "note": "Gray Swan indirect prompt-injection attack success rate at 15 attempts, reported as the Sonnet 5 baseline in the Sonnet 5.5 card.",
+      "source": "https://www-cdn.anthropic.com/870c8f525702625d2c62fc6dd04c857e3250bec1/Claude%20Sonnet%205.5%20System%20Card.pdf",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-1-sol",
+      "benchmark": "unwanted_persistence_after_warning",
+      "value": 23.5,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "OpenAI self-reported share of rollouts in which the model persisted after being warned it lacked authorization. Filed under a separate id from access_denied_workaround because the same addendum gives GPT-6 Astra 17.4% where the registry holds 19.0, suggesting a rewritten harness.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-astra",
+      "benchmark": "unwanted_persistence_after_warning",
+      "value": 17.4,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "Comparison value from the GPT-6.1 Sol addendum. Metric-continuity flag: registry holds 19.0 for gpt-6-astra under access_denied_workaround; harness difference unresolved.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-1-sol",
+      "benchmark": "peer_coordination_unauthorized_action",
+      "value": 3.0,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "OpenAI message-board eval: GPT-6.1 Sol contacted apparent peer agents 38% of the time but carried out the specified unauthorized action in only 3% of runs.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-sol",
+      "benchmark": "peer_coordination_unauthorized_action",
+      "value": 11.0,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "Comparison value from the GPT-6.1 Sol addendum; GPT-6 Sol contacted peers 26% of the time and carried out the unauthorized action in 11% of runs.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-1-sol",
+      "benchmark": "severity3_flag_rate",
+      "value": 0.1,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "28 flags across the addendum's rollout set. OpenAI self-reported.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-astra",
+      "benchmark": "severity3_flag_rate",
+      "value": 0.1,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "27 flags, reported alongside GPT-6.1 Sol in the same addendum.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "auto": true
+    },
+    {
+      "model": "gpt-6-sol",
+      "benchmark": "severity3_flag_rate",
+      "value": 0.1,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "42 flags, reported alongside GPT-6.1 Sol in the same addendum.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "auto": true
+    },
+    {
+      "model": "gpt-5-6-sol",
+      "benchmark": "severity3_flag_rate",
+      "value": 0.1,
+      "date": "2026-09-29",
+      "self_reported": true,
+      "note": "63 flags, the highest of the four models compared in the GPT-6.1 Sol addendum.",
+      "source": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
       "auto": true
     }
   ]
